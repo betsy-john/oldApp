@@ -17,9 +17,13 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'donate.html',
         controller:'LoginCtrl'
     })
-    .state('aboutUs', {
-        url: '/aboutUs',
+    .state('aboutus', {
+        url: '/aboutus',
         templateUrl: 'about-us.html',
+    })
+    .state('header', {
+        url: '/header',
+        templateUrl: 'header.html',
         controller:'HeaderNav'
     })
 });

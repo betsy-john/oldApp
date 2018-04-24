@@ -1,0 +1,777 @@
+/*----------------------------------------------------Login----------------------------------------------------------*/
+/*--------------------------------------Login left-------------------------------*/
+.login-content {
+	padding: 1em;
+	box-shadow: 0px 1px 8px #0A0000;
+	background-color: #fff;
+	border-radius: 8px;
+	width: 600px;
+}
+
+.login-content.term-privacy {
+	border-radius: 5px;
+}
+
+.login-content.term-privacy h4 {
+	font-size: 18px;
+}
+
+.login-content.term-privacy .custom_button {
+	padding: 2px 30px;
+}
+
+.login-content.term-privacy .custom_button.btn-primary {
+	color: #000;
+	background-color: #fff;
+	border-color: #000;
+}
+
+.login-content.term-privacy .custom_button.btn-primary:hover, .login-content.term-privacy .custom_button.btn-primary:focus {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #fff;
+}
+
+.login-content.term-privacy .custom_button:nth-child(1) {
+	margin-right: 10px;
+}
+
+.login-content.term-privacy .custom_button:nth-child(2) {
+	margin-left: 10px;
+}
+
+.login-content.term-privacy p {
+	font-size: 12px;
+}
+
+.login_head {
+	font-size: 17px;
+}
+
+.login_bg {
+	background: url("../images/adobestock.jpg") no-repeat;
+	background-size: cover;
+}
+
+#login-form, #registration-form, #landing_page {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("../images/login_triangle_bg.svg") rgba(0, 0, 0, 0.4) no-repeat center center;
+}
+
+#login-form .form-control, #registration-form .form-control, #landing_page .form-control {
+	font-size: 14px;
+}
+
+.input-border {
+	border: 1px solid #000;
+}
+
+#login-form a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#login-form .btn {
+	color: #fff;
+}
+
+#login-form .input-padding {
+	padding-left: 1.7em;
+	font-size: 13px;
+}
+
+#login-form input[type='checkbox'] {
+	background-image: url("../images/checkbox_sprite.png");
+	background-repeat: no-repeat;
+	margin: 0 4px -2px 0;
+	border-color: transparent;
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	-webkit-border-radius: 0;
+	background-position: -50px -81px;
+	outline: none;
+}
+
+#login-form input[type='checkbox']:checked {
+	background-position: -25px -81px;
+	outline: none;
+	border-color: transparent;
+}
+
+#login-form input[type='checkbox']:active {
+	background-position: -25px -81px;
+	outline: none;
+}
+
+#login-form input[type='checkbox']:active:checked {
+	background-position: -25px -81px;
+	outline: none;
+	border-color: transparent;
+}
+
+#login-form input[type='checkbox']:focus:checked, #login-form input[type='checkbox']:hover:checked {
+	outline: none;
+	border-color: transparent;
+}
+
+#login-form .txt_light {
+	color: #808080;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#login-form a.txt_light:hover, #login-form a.txt_light:focus {
+	color: #808080;
+}
+
+#login-form .txt_blue {
+	color: #1882B2;
+	font-size: 13px;
+	background: none;
+	border: none;
+}
+
+#login-form a.txt_blue:focus {
+	color: #1882B2;
+	font-weight: bold;
+}
+
+#login-form .login_padding {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 13px;
+}
+#customBtn {
+	display: inline-block;
+	background: white;
+	color: #444;
+	width: 190px;
+	border-radius: 5px;
+	border: thin solid #888;
+	box-shadow: 1px 1px 1px grey;
+	white-space: nowrap;
+  }
+  #customBtn:hover {
+	cursor: pointer;
+  }
+  span.label {
+	font-family: serif;
+	font-weight: normal;
+  }
+  span.icon {
+	background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: 42px;
+	height: 42px;
+  }
+  span.buttonText {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 42px;
+	padding-right: 42px;
+	font-size: 14px;
+	font-weight: bold;
+	/* Use the Roboto font that is loaded in the <head> */
+	font-family: 'Roboto', sans-serif;
+  }
+
+
+/*------------------Login Right-------------------------------*/
+.social_sec .fa {
+	font-size: 1.2em;
+	color: #fff;
+	vertical-align: text-bottom;
+}
+
+.social-text {
+	padding-left: 1em;
+	vertical-align: top;
+	color: white;
+}
+
+.facebook {
+	padding-left: 22px;
+}
+
+.form-control.btn-facebook {
+	background-color: #3f5dd0;
+}
+
+a.btn-facebook:hover, a.btn-facebook:focus {
+	background-color: #3f5dd0;
+}
+
+#login-form .btn-google {
+	background-color: #dd4b34;
+	padding-right: 26px;
+}
+
+#login-form button {
+	margin-bottom: 1em;
+	outline: none;
+}
+
+#login-form button:hover, #login-form button:focus {
+	color: #fff;
+}
+
+#login-form button.txt_blue:focus {
+	background: none;
+	color: #1882B2;
+	font-weight: bold;
+}
+
+#login-form button.txt_blue:hover {
+	background: none;
+	color: #1882B2;
+}
+
+a.btn-google:hover, a.btn-google:focus {
+	background-color: #dd4b34;
+}
+
+.form-control.btn-linkedin {
+	background-color: #007cbc;
+	outline-style: none;
+	color: #fff;
+}
+
+a.btn-linkedin:hover, a.btn-linkedin:focus {
+	background-color: #007cbc;
+	outline-style: none;
+}
+
+.zip-padding {
+	padding-left: 12px;
+}
+
+/*------------------------------Landing Page-----------------------------*/
+#landing_page {
+	background: url("../images/login_triangle_bg.svg") transparent no-repeat center center;
+}
+
+#landing_page .landing_divider.landing_msg {
+	font-size: 22px;
+}
+
+#landing_page .landing_sec {
+	background-color: #000;
+	opacity: 0.8;
+	width: 100%;
+}
+
+#landing_page .landing_nav {
+	padding: 0.5em 1em;
+	color: #fff;
+}
+
+#landing_page .landing_msg {
+	color: #fff;
+	font-size: 22px;
+	padding: 0.5em;
+}
+
+#landing_page .landing_msg .landing_divider.landing_msg {
+	font-size: 24px;
+}
+
+#landing_page a.landing_links {
+	border: 3px solid #fff;
+	font-size: 2.2em;
+	letter-spacing: 2px;
+	text-decoration: none;
+}
+
+#landing_page .landing-mob-content {
+	color: #fff;
+}
+
+#landing_page a.landing_links:hover, #landing_page a.landing_links:focus {
+	color: #fff;
+}
+
+#landing_page .imago_link {
+	color: #fff;
+	font-size: 20px;
+}
+
+#landing_page a.imago_link:hover, #landing_page a.imago_link:focus {
+	color: #fff;
+	font-size: 20px;
+}
+
+#landing_page .landing_nav.landing_links:hover, #landing_page .landing_nav.landing_links:focus {
+	color: #D5DB25;
+	border: 3px solid #D5DB25;
+}
+
+/*------------------------Registration Page-----------------------------*/
+.creat_acc {
+	font-size: 28px;
+	padding-right: 1rem;
+	padding-left: 0.4em;
+}
+
+.creat_acc.padding_0 {
+	padding: 0;
+}
+
+.reg-label {
+	font-size: 20px;
+	font-weight: 100;
+}
+
+#registration-form .form-control,
+.user_account_form .form-control {
+	height: 2.3em;
+	border-radius: 2px;
+	font-size: 13px;
+}
+
+#registration-form .font-light,
+.user_account_form .font-light {
+	font-weight: lighter;
+	font-size: 13px;
+	color: #807e7f;
+}
+
+#registration-form .close_registration,
+.user_account_form .close_registration {
+	top: -27px;
+	right: -12px;
+}
+
+#registration-form ::-webkit-input-placeholder,
+.user_account_form ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+	color: #595A5C;
+	font-size: 13px;
+}
+
+#registration-form ::-moz-placeholder,
+.user_account_form ::-moz-placeholder {
+  /* Firefox 19+ */
+	color: #595A5C;
+	font-size: 13px;
+}
+
+#registration-form :-ms-input-placeholder,
+.user_account_form :-ms-input-placeholder {
+  /* IE 10+ */
+	color: #595A5C;
+	font-size: 13px;
+}
+
+#registration-form :-moz-placeholder,
+.user_account_form :-moz-placeholder {
+  /* Firefox 18- */
+	color: #595A5C;
+	font-size: 13px;
+}
+
+#registration-form select,
+.user_account_form select {
+	color: #333;
+}
+
+#registration-form fieldset p label,
+.user_account_form fieldset p label {
+	font-size: 12px;
+}
+
+#registration-form fieldset,
+.user_account_form fieldset {
+	display: table;
+	border: 0;
+	padding: 0;
+	padding-right: 1rem;
+}
+
+#registration-form fieldset p,
+  .user_account_form fieldset p {
+	display: table-row;
+}
+
+#registration-form fieldset select, #registration-form fieldset label,
+  .user_account_form fieldset select,
+  .user_account_form fieldset label {
+	display: table-cell;
+	margin: 3px;
+}
+
+.reg_content {
+	width: 950px;
+	background: #fff;
+	padding: 2em;
+	position: relative;
+	margin: 20px 10px;
+}
+
+.reg-content-width-sm {
+	width: 320px;
+}
+
+.close_registration {
+	position: absolute;
+	right: -12px;
+	top: -28px;
+	text-decoration: none;
+}
+
+.close_registration img {
+	width: 23px;
+}
+
+.close_registration:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+#registration-form .input-group-addon {
+	padding: 0;
+	border: 0;
+}
+
+#registration-form .select_padding.form-control {
+	padding: 3px 6px;
+}
+
+#registration-form input, #registration-form textarea, #registration-form select {
+	font-size: 13px;
+}
+
+.reg-bottom {
+	margin-bottom: 1em;
+}
+
+input.sign_up_btn {
+	border-radius: 50px;
+	float: right;
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	padding: 0.2em 3em;
+	outline: none;
+}
+
+.button.sign_up_btn:hover, .button.sign_up_btn:focus {
+	background-color: #000;
+	outline: none;
+	color: #fff;
+}
+
+/*-------------------Froget password section------------*/
+.forget_pass_content .relative {
+	position: relative;
+}
+
+.forget_pass_content .login_head {
+	margin-bottom: 17px;
+	margin-top: 0;
+}
+
+.forget_pass_content .close_btn {
+	position: absolute;
+	padding: 1px 7px;
+	border-radius: 50px;
+	border: 2px solid #fff;
+	color: #fff;
+}
+
+.forget_pass_content .submit_btn {
+	background: #0070A8;
+	border-color: #0070A8;
+	margin-bottom: 10px;
+}
+
+.forget_pass_content .reset_sec p {
+	color: #808080;
+}
+
+.forget_pass_content .reset_sec .reg-label {
+	margin-left: 10px;
+}
+
+.forget_pass_content a {
+	font-size: 13px;
+}
+
+.date-pick-btn {
+	padding: 3px 12px;
+	padding-top: 5px;
+}
+
+/*------------------Registration Landing Page------------*/
+.reg-landing {
+	padding: 1em 0;
+	height: 260px;
+}
+
+.reg-landing .landing-divide-1 {
+	bottom: 15px;
+	position: absolute;
+	left: 33.5%;
+}
+
+.reg-landing .landing-divide-2 {
+	bottom: 15px;
+	position: absolute;
+	left: 63.5%;
+}
+
+.reg-land-head {
+	font-size: 17px;
+}
+
+.reg-img-size {
+	background-size: 100px;
+	height: 68px;
+	width: 68px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.reg-labels {
+	margin-top: 4em;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.reg_landing_link:hover {
+	color: #d1d2d2;
+}
+
+.learner-landing .learner-reg {
+	background: url("../images/learner-reg-icon.svg") no-repeat center center;
+}
+
+.learner-landing:hover .learner-reg, .learner-landing:focus .learner-reg {
+	background: url("../images/learner-reg-icon-active.svg") no-repeat center center;
+}
+
+.learner-landing:hover .reg-labels, .learner-landing:focus .reg-labels {
+	color: #3B938D;
+}
+
+.employer-landing .emp-registration {
+	background: url("../images/employer-reg.svg") no-repeat center center;
+}
+
+.employer-landing:hover .emp-registration, .employer-landing:focus .emp-registration {
+	background: url("../images/reg-employer-active.svg") no-repeat center center;
+}
+
+.employer-landing:hover .reg-labels, .employer-landing:focus .reg-labels {
+	color: #1882B2;
+}
+
+.facilitator-landing .fac-registration {
+	background: url("../images/facilitator-reg.svg") no-repeat center center;
+}
+
+.facilitator-landing:hover .fac-registration, .facilitator-landing:focus .fac-registration {
+	background: url("../images/reg-facilitator-active.svg") no-repeat center center;
+}
+
+.facilitator-landing:hover .reg-labels, .facilitator-landing:focus .reg-labels {
+	color: #DC9527;
+}
+
+.text-light {
+	color: #d1d2d2;
+}
+
+#login-form .login-content.mentor-landing {
+	border-radius: 4px;
+}
+
+#login-form .login-content.mentor-landing p {
+	font-size: 14px;
+	margin-top: 1.5em;
+	color: #000;
+}
+
+#login-form .login-content.mentor-landing p.mentor-info-txt {
+	font-size: 15px;
+	padding-left: 1.3em;
+}
+
+#login-form .login-content.mentor-landing p.mentor-info-txt a, #login-form .login-content.mentor-landing p.mentor-info-txt a:hover, #login-form .login-content.mentor-landing p.mentor-info-txt a:focus {
+	color: #1882B2;
+	font-weight: bold;
+	font-size: 14px;
+	font-style: italic;
+}
+
+#login-form .login-content.mentor-landing .make-mentor-btn {
+	border-radius: 0;
+	margin: 1.5em 0;
+	padding: 6px 16px;
+	font-size: 17px;
+	background: #dc9426;
+	color: #fff;
+	margin-bottom: 1em;
+}
+
+#login-form .login-content.mentor-landing .mentor-landing-head {
+	font-size: 18px;
+}
+
+#login-form .login-content.mentor-landing .mentor-border {
+	margin-left: -13%;
+	margin-top: 1.5em;
+}
+
+#login-form.mentor-bg {
+	background: url(../images/login_triangle_bg.svg) no-repeat center center;
+	min-height: 93.1vh;
+}
+
+.mentor-trans-bg {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mentor-falcon_logo {
+	border: 3px solid #fff;
+	padding: 5px;
+	margin-left: 1.5em;
+	margin-top: 1.5em;
+}
+
+.emp-dis {
+	width: 100%;
+	resize: none;
+	padding: 4px 12px;
+	border-radius: 2px;
+	height: 100px;
+}
+
+/*----Employer Registration----*/
+.emp-reg .next_label {
+	color: #2682b5;
+	font-weight: 100;
+	font-size: 16px;
+}
+
+.emp-reg .select_padding.form-control {
+	padding: 3px 6px;
+}
+
+.emp-reg .date-pick-btn {
+	padding: 4px 12px;
+}
+
+.fa-arrow-circle-o-right {
+	font-size: 28px;
+	color: #2682b5;
+	margin-left: 10px;
+	vertical-align: sub;
+}
+
+.required-field {
+	font-size: 20px;
+}
+
+.emp-reg-next .creat_acc {
+	padding-left: 0;
+}
+
+.emp-reg-next hr {
+	margin-top: 5px;
+	margin-bottom: 12px;
+	border-color: #ccc;
+}
+
+.emp-reg-btm label {
+	color: #2682b5;
+	font-weight: 100;
+	font-size: 16px;
+}
+
+.emp-reg-btm .fa-arrow-circle-o-left {
+	color: #2682b5;
+	font-size: 28px;
+	vertical-align: sub;
+	margin-right: 10px;
+}
+
+.emp-reg-success-msg,
+.fac-reg-success-msg {
+	color: #555;
+	font-size: 14px;
+	margin-top: 24px;
+}
+
+.emp-reg-success-msg p > span,
+  .fac-reg-success-msg p > span {
+	margin-right: 10px;
+}
+
+.emp-reg-succes hr,
+.fac-reg-succes hr {
+	border-color: #ccc;
+}
+
+#add-user .reg-left {
+	margin-bottom: 12px;
+}
+
+.reg-label {
+	font-size: 20px;
+}
+
+.state-select {
+	width: 92%;
+}
+
+#registration-form.grey-bg {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*-----------------------User account update---------------------------------------------------*/
+.user_account_inner {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+}
+
+.user_account_form {
+	padding: 20px;
+	margin: 20px 0;
+	background: #fff;
+}
+
+.user_account_form .creat_acc {
+	padding-left: 0;
+}
+
+.user_account_form .more_info {
+	padding-bottom: 20px;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 20px;
+	font-size: 17px;
+}
+
+.user_account_form .month_select {
+	width: 45px;
+	padding: 2px 0;
+	margin-right: 10px;
+}
+
+.user_account_form .year_select {
+	width: 62px;
+	padding: 2px 0;
+}
+
+.user_account_form .font-light {
+	margin-left: 3px;
+}
