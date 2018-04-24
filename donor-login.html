@@ -1,33 +1,41 @@
-<section class="se">
-        <ul>
-            <img src="./old_files/slider.jpg" class="Rimage">
+
+
+<section class="se" ng-controller="LoginCtrl">
+        <meta name="google-signin-client_id" content="
+        864770080724-sjta17qkd486m937rhmo40g6ov7v2mce.apps.googleusercontent.com
+        ">
+        <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+    <ul>
+        <img ng-src="./old_files/slider.jpg" class="Rimage">
             <li class="section1art">
                 <article class="section2">
                     <fieldset class="fieldsetart">
-                        <label>Name:
-                            <br>
-                            <input name="email" type="text">
-                        </label>
-                        <br>
-                        <br>
 
-                        <label>Username or Email:
-                            <br>
-                            <input name="mobile" type="text">
-                        </label>
-                        <br>
-
-                        <div class="code3">
-                            <input name="form" value="rem" type="checkbox">Remember Me
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                            <label>Name*</label>
+                            <input type="text" name="name" class="form-control" ng-model="user.name" required>
+                            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
                         </div>
-                        <br>
-                        <br>
 
-                        <div>
-                            <input value="SUBMIT" type="submit" class="buttonart">
+                        <!-- USERNAME -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+                            <label>Username</label>
+                            <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+                            <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                            <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
                         </div>
-                        <br>
+
+                        <!-- EMAIL -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" ng-model="user.email">
+                            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button> 
+                        <span class="g-signin2" data-onsuccess="onSignIn"></span>
+                        
                     </fieldset>
+                   
                 </article>
 
                 <article class="para1art">
@@ -35,15 +43,11 @@
                         <pre>LEAVE US A MESSAGE</pre>
                     </big>
                     <p class="code6">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus tempus diam, in molestie ipsum vestibulum non. Quisque
-                        nec magna eu mi imperdiet iaculis eget at dui. Ut dapibus felis malesuada aliquet porta. Ut dapibus
-                        felis malesuada aliquet porta. Proin laoreet quam ac nunc ullamcorper aliquet. Integer vel nibh eget
-                        mi porta tristique. Mauris ac felis nec felis accumsan egestas ac eget enim. Suspendisse porttitor
-                        odio non egestas sollicitudin. Phasellus dui lectus, congue id consectetur nec.
-
+                        {{message}}
                     </p>
                 </article>
             </li>
 
-        </ul>
-    </section>
+    </ul>
+        </form>
+</section>

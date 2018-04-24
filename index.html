@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///home/betsy/assignment2/REPO_TEST/neweb/old.html -->
+<html ng-app="oldApp">
+
+<head>
+    <title>Old App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="./old_files/old.css">
+    <link rel="stylesheet" href="./old_files/norm.css">
+    <script src="app.js"></script>    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+    <!-- controllers -->
+    <script src="js/controller/login-ctrl.js"></script>
+    <!-- services -->
+    <script src="js/services/urlRequestService.js"></script>
+   
+
+    <style>
+    </style>
+</head> 
+
+<body>   
+    <header>
+        <ng-include src="'header.html'"> </ng-include>
+    </header>
+        <ui-view></ui-view>
+        <!-- <footer>
+            <ng-include src="footer.html"> </ng-include>
+        </footer> -->
+</body>
+
+</html>

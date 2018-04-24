@@ -1,15 +1,25 @@
-angular.module('oldApp', []);
-angular.module('oldApp').config(function ($stateProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider, $locationProvider, CacheFactoryProvider, $compileProvider, LightboxProvider, SETTINGS) {
-
+angular.module('oldApp', [
+    'ui.router',  
+])
+angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
     $stateProvider
     .state('main', {
-        abstract: true,
-        templateUrl: 'views/layouts/main.html',
-        controller: 'MainCtrl'
-    })
-    .state('login', {
-        url: '/login',
-        controller: 'LoginCtrl',
+        url: '/',
         templateUrl: 'donor-login.html'
+    })
+    .state('donor', {
+        url: '/donor',
+        templateUrl: 'donor-login.html'
+    })
+    .state('donate', {
+        url: '/donate',
+        templateUrl: 'donate.html',
+        controller:'LoginCtrl'
+    })
+    .state('aboutUs', {
+        url: '/aboutUs',
+        templateUrl: 'about-us.html',
+        controller:'HeaderNav'
     })
 });

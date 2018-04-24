@@ -400,6 +400,28 @@ li{
             width: 384px;
         }  
       }
+      .round-arrow-btn {
+        padding: 6px 7px;
+        border-radius: 100%;
+        border: 1px solid;
+        margin-right: 10px;
+        cursor: pointer;
+        background-color: #fff;
+    }
+    
+    .round-arrow-btn-label {
+        font-family: adelle-italic;
+        font-size: 16px;
+        vertical-align: baseline;
+    }
+    .round-arrow-btn-sec {
+        color: #1882B2;
+        
+    }
+    .label_sec{       
+            font-weight: normal;
+    }
+    
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     /*SECTION 3 stlying about us*/
