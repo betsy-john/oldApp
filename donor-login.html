@@ -1,6 +1,6 @@
-<div class="container-fluid"  ng-controller="LoginCtrl">
+<div class="container-fluid" ng-controller="LoginCtrl">
     <div class="row" id="login-form">
-        <form class="login-content" role="form" novalidate>
+                <form name="userForm" class="login-content" role="form" ng-submit="submitForm(userForm.$valid)" novalidate>
            
                 <div class="col-xs-12 col-sm-6 login_lt" style="border-right:solid rgb(204, 199, 199) 1px ">
                     <h4 class="text-center login_head">Login To Your Account</h4>
@@ -26,7 +26,7 @@
                             <input type="email" name="email" class="form-control" ng-model="user.email">
                             <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
                         </div>
-                        <button class="btn form-control text-center round-structure btn-linkedin" type="submit"tabindex=3>Sign In</button>
+                        <button class="btn form-control text-center round-structure btn-linkedin" type="submit" tabindex=3>Sign In</button>
                         <div class="clearfix">
                             <div class="pull-left margin_lt">
                                 <a ui-sref="lostPassword" href="#/lost-password" class="txt_blue" tabindex=4>Forgot password?</a>

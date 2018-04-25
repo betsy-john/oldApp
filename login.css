@@ -4,7 +4,7 @@
 	padding: 1em;
 	box-shadow: 0px 1px 8px #0A0000;
 	background-color: #fff;
-	border-radius: 8px;
+	border-radius: 30px;
 	width: 600px;
 }
 
@@ -54,7 +54,7 @@
 }
 
 #login-form, #registration-form, #landing_page {
-	min-height: 100vh;
+	min-height: 70vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -81,6 +81,12 @@
 #login-form .input-padding {
 	padding-left: 1.7em;
 	font-size: 13px;
+}
+.form-control.round-structure{
+    border-radius: 20px
+}
+.login_rt{
+	padding-top: 50px;
 }
 
 #login-form input[type='checkbox'] {
