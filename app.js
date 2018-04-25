@@ -26,4 +26,14 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'header.html',
         controller:'HeaderNav'
     })
+    .state('lostPassword', {
+        url: '/lostPassword',
+        templateUrl: 'login/forgot_pass.html',
+    })
+    .state('signup', {
+        url: '/signup',
+        templateUrl: 'login/sign_up.html',
+        controller:'signUp'
+
+    })
 });

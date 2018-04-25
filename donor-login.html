@@ -1,39 +1,70 @@
-<div class="container-fluid">
+<div class="container-fluid"  ng-controller="LoginCtrl">
     <div class="row" id="login-form">
-            <form class="login-content" role="form" novalidate> 
-                    <div class="col-xs-12 col-sm-6 login_lt" style="border-right:solid rgb(204, 199, 199) 1px ">
-                            <h4 class="text-center login_head">Login To Your Account</h4>
-                            <div class="margin_tp">
-                                <input type="email" class="form-control round-structure input-padding input-border login_padding" placeholder="E-mail address" ng-model="credentials.email" tabindex=1/>
-                                <input type="password" class="form-control round-structure input-padding input-border" placeholder="••••••••" ng-model="credentials.password" tabindex=2 />
-                                <button class="btn form-control text-center round-structure btn-linkedin" ng-click="login(credentials, remember)" tabindex=3>Sign In</button>
-                                <div class="clearfix">
-                                    <div class="pull-left margin_lt">
-                                        <a ui-sref="lostPassword" href="#/lost-password" class="txt_blue" tabindex=4>Forgot password?</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <label class="remember-label txt_light"><input type="checkbox" ng-model="remember" tabindex=5>Remember me</label>
-                                    </div>
-                                </div>
+        <form class="login-content" role="form" novalidate>
+           
+                <div class="col-xs-12 col-sm-6 login_lt" style="border-right:solid rgb(204, 199, 199) 1px ">
+                    <h4 class="text-center login_head">Login To Your Account</h4>
+                    <div class="margin_tp">
+
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                            <label>Name*</label>
+                            <input type="text" name="name" class="form-control" ng-model="user.name" required>
+                            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+                        </div>
+
+                        <!-- USERNAME -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+                            <label>Username</label>
+                            <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+                            <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                            <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" ng-model="user.email">
+                            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                        </div>
+                        <button class="btn form-control text-center round-structure btn-linkedin" type="submit"tabindex=3>Sign In</button>
+                        <div class="clearfix">
+                            <div class="pull-left margin_lt">
+                                <a ui-sref="lostPassword" href="#/lost-password" class="txt_blue" tabindex=4>Forgot password?</a>
+                            </div>
+                            <div class="pull-right">
+                                <label class="remember-label txt_light">
+                                    <input type="checkbox" ng-model="remember" tabindex=5>Remember me</label>
                             </div>
                         </div>
-                        
-                        <div class="col-xs-12 col-sm-6 login_rt social_sec">
-                            <h5 class="text-center login_head">Or use another service</h5>
-                            <div class="margin_tp text-center">
-                                <button class="form-control text-center button round-structure btn-facebook" tabindex=6><i class="fa fa-facebook"></i><span class="social-text facebook hidden-xs">Sign in with Facebook</span></button>
-                                <button class="form-control text-center button round-structure btn-google" tabindex=7><i class="fa fa-google-plus"></i><span class="social-text google hidden-xs">Sign in with Google</span></button>
-                                <button class="form-control text-center button round-structure btn-linkedin btn-linkedin-mob"  tabindex=8><i class="fa fa-linkedin"></i><span class="social-text hidden-xs">Sign in with LinkedIn</span></button>
-                                <div class="clearfix">
-                                    <div class="pull-left margin_lt">
-                                        <span class="txt_light">Don’t have an account?</span>
-                                    </div>
-                                    <div class="pull-right sign_btn">
-                                        <button class="txt_blue" ng-click="signUp()" tabindex=9>Sign Up!</button>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+
+
+            <div class="col-xs-12 col-sm-6 login_rt social_sec">
+                <h5 class="text-center login_head">Or use another service</h5>
+                <div class="margin_tp text-center">
+                    <button class="form-control text-center button round-structure btn-facebook" tabindex=6>
+                        <i class="fa fa-facebook"></i>
+                        <span class="social-text facebook hidden-xs">Sign in with Facebook</span>
+                    </button>
+                    <button class="form-control text-center button round-structure btn-google" tabindex=7>
+                        <i class="fa fa-google-plus"></i>
+                        <span class="social-text google hidden-xs">Sign in with Google</span>
+                    </button>
+                    <button class="form-control text-center button round-structure btn-linkedin btn-linkedin-mob" tabindex=8>
+                        <i class="fa fa-linkedin"></i>
+                        <span class="social-text hidden-xs">Sign in with LinkedIn</span>
+                    </button>
+                    <div class="clearfix">
+                        <div class="pull-left margin_lt">
+                            <span class="txt_light">Don’t have an account?</span>
                         </div>
-            </form>
+                        <div class="pull-right sign_btn">
+                            <button class="txt_blue" ui-sref="signup" tabindex=9>Sign Up!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    </div>
+</div>
