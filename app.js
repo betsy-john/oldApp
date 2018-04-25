@@ -40,4 +40,8 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/gallery',
         templateUrl: 'header/gallery.html',
     })
+    .state('videomenu', {
+        url: '/videomenu',
+        templateUrl: 'header/video.html',
+    })
 });

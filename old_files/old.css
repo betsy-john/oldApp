@@ -40,7 +40,7 @@ li{
 }
 .code9{
     background-color: black;
-    height: 310px;
+    height: 550px;
     padding-top: 100px;
     padding-left: 50px;
     padding-bottom: 100px;
@@ -950,7 +950,7 @@ li{
     #playbutton{
         position: relative;
         left: -351px;
-        top: -83px;
+        top: 0px;
        }
        #videoart{
         float:left;margin-left: 330px;
@@ -963,7 +963,7 @@ li{
        .code9
        {
         background-color: black;
-        height: 310px;
+        height: 530px;
         padding-top: 100px;
         padding-left: 50px;
         padding-bottom: 100px;
