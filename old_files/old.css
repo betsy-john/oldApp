@@ -25,6 +25,12 @@ li{
     font-family: 'flanders';
     font-size: 12px;
 }
+.code16{
+    color: rgb(105, 101, 101);
+    font-family: 'flanders';
+    font-size: 15px;
+    font-weight: bold;
+}
 .code7{
     width: 355px;
     height: 303px;
@@ -449,17 +455,19 @@ li{
 
     /*SECTION 3 stlying about us*/
     #section3art{
-        height:470px;
-        padding-top: 50px;
+        height:650px;
+        padding-top: 70px;
         padding-bottom: 50px;
+        font-size: 18px;
      }
      #uldec{
         height:436px
     }
      #donArt{
         float:left;
-        margin-left: 300px;
+        margin-left: 360px;
         padding-top: 50px;
+        padding-right: 20px;
 
      }
      #donationArticle{
@@ -469,7 +477,7 @@ li{
      #image2art{
         float:left;
         padding-right: 40px;
-        padding-left: 30px;
+    
         padding-top: 70px;
      }
      #don2art{
@@ -636,7 +644,8 @@ li{
         #uldec{
             height:1220px
         }
-        .code5{ text-align: center;
+        .code5{
+             text-align: center;
             height: 122px;
             width: 340px;
         }
@@ -1099,10 +1108,11 @@ li{
     height:470px
     }
     #section6art{
-        height: 550px; 
+        height: 700px; 
         padding-top: 50px;
         padding-bottom: 50px; 
-        background-color: rgb(247, 245, 245);
+        background-color: rgb(180, 145, 145);
+        font-size: 24px
       }
       #imgart1{
         width:600px;

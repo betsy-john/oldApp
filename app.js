@@ -19,7 +19,7 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     })
     .state('aboutus', {
         url: '/aboutus',
-        templateUrl: 'about-us.html',
+        templateUrl: 'header/about-us.html',
     })
     .state('header', {
         url: '/header',
@@ -35,5 +35,9 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'login/sign_up.html',
         controller:'signUp'
 
+    })
+    .state('gallery', {
+        url: '/gallery',
+        templateUrl: 'header/gallery.html',
     })
 });
