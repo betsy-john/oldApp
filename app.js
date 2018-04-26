@@ -57,4 +57,8 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'donateUs/WhoAllWants.html',
         controller:'whoAllWants'
     })
+    .state('appointment', {
+        url: '/appointment',
+        templateUrl: 'donateUs/appointment.html',        
+    })
 });

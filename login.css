@@ -107,8 +107,8 @@
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	-o-appearance: none;
-	appearance: none;
-	-webkit-border-radius: 0;
+	-appearance: none;
+	/* -webkit-border-radius: 0; */
 	background-position: -50px -81px;
 	outline: none;
 }
