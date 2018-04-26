@@ -44,4 +44,17 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/videomenu',
         templateUrl: 'header/video.html',
     })
+    .state('charity', {
+        url: '/charity',
+        templateUrl: 'donation.html',
+    })
+    .state('fillupform', {
+        url: '/fillupform',
+        templateUrl: 'donateUs/fillUpform.html',
+    })
+    .state('memberlist', {
+        url: '/memberlist',
+        templateUrl: 'donateUs/WhoAllWants.html',
+        controller:'whoAllWants'
+    })
 });

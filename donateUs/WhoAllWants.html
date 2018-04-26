@@ -1,0 +1,57 @@
+<div class="container-fluid ">
+    <div class="row" id="login-form">
+        <form name="userForm" class="wid fillUp" role="form" ng-submit="submitForm(userForm.$valid)" novalidate>
+            <div class="col-xs-12 wid term-privacy text-center">
+                <h4>Who All Are Donating?</h4>
+                <p class="text-left margin_tp mb-md">You can add all the members who are interested in donating blood.
+                    <a>Privacy and Use Policy.</a>
+                </p>
+                <hr/>
+                <div>
+                    <div>
+                        <div ng-repeat="item in inputs">
+                            <div ng-model="item.value" class="row">
+                                <div class="col-md-3" style="height: 50px;">
+                                    <label for="name">Name</label>
+                                    <input type="name" name="name" class="form-control" required>
+                                </div>
+                                <div class="col-md-3" style="height: 50px;">
+                                    <label for="name">Select:</label>
+                                    <br>
+                                    <select>
+                                        <option value="">(Relation)</option>
+                                        <option value="x" ng-repeat="x in drop">{{x}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3" style="height: 50px;">
+                                    <label for="bloodgroup">Blood Group:</label>
+                                    <input type="text" name="bloodgroup" class="form-control" style="float: left;" required>
+                                </div>
+                                <div class="col-md-3" style="height: 50px;">
+                                    <label for="name">Remove</label>
+                                    <br>
+                                    <button ng-click="removefield()">&#8861</button>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <button ng-click="addfield()">Add Member</button>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-md-6">
+                        <button class="btn form-control text-center round-structure btn-linkedin " type="submit" ui-sref="charity" tabindex=3>Go Back?</button>
+                    </div>
+                    <div class=" col-md-6">
+                        <button class="btn form-control text-center round-structure btn-linkedin" type="submit" ui-sref="" tabindex=3>Continue</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
