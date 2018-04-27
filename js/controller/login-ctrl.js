@@ -5,7 +5,6 @@ angular.module('oldApp').controller('LoginCtrl', function ($scope, urlRequestSer
 
         // check to make sure the form is completely valid
         if (isValid) {
-            console.log('privacyGo..')
             $state.go('privacy')
         } 
         else {
