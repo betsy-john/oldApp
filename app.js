@@ -1,6 +1,4 @@
-angular.module('oldApp', [
-    'ui.router',  
-])
+angular.module('oldApp', ['ui.router', 'ngMaterial'])
 angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider

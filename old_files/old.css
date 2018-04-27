@@ -1,6 +1,8 @@
 body {
     background-image: url("/old_files/slider.jpg");
     background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
 }
 
 li.section3{
