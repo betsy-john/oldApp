@@ -1,6 +1,4 @@
-angular.module('oldApp', [
-    'ui.router',  
-])
+angular.module('oldApp', ['ui.router', 'ngMaterial'])
 angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -70,6 +68,9 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     .state('privacyanduse', {
         url: '/privacyanduse',
         templateUrl: 'terms-and-policy/termAndService.html', 
-           
+    })     
+    .state('privacy', {
+        url: '/privacy',
+        templateUrl: 'donor-privacy.html'
     })
 });
