@@ -67,4 +67,9 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'donateUs/confirm.html', 
         controller: 'appointment as vm'     
     })
+    .state('privacyanduse', {
+        url: '/privacyanduse',
+        templateUrl: 'terms-and-policy/termAndService.html', 
+           
+    })
 });
