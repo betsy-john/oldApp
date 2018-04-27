@@ -1,3 +1,7 @@
+body {
+    background-image: url("/old_files/slider.jpg");
+    background-repeat: no-repeat;
+}
 
 li.section3{
     
@@ -101,6 +105,7 @@ li{
    .Rimage{
     width: 100%;
    }
+
    .fieldsetart{
         padding-bottom: 20px;
         padding-top: 30px;
