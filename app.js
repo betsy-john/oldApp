@@ -59,6 +59,12 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     })
     .state('appointment', {
         url: '/appointment',
-        templateUrl: 'donateUs/appointment.html',        
+        templateUrl: 'donateUs/appointment.html', 
+        controller: 'appointment as vm'     
+    })
+    .state('popupconfirmation', {
+        url: '/popupconfirmation',
+        templateUrl: 'donateUs/confirm.html', 
+        controller: 'appointment as vm'     
     })
 });

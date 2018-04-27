@@ -1,0 +1,94 @@
+<div class="container-fluid ">
+    <div class="row" id="login-form">
+        <form name="userForm" class="wid fillUp" role="form" ng-submit="submitForm(userForm.$valid)" novalidate>
+            <div class="col-xs-12 wid term-privacy text-center">
+                <h4>Appointment</h4>
+                <p class="text-left margin_tp mb-md">You have to take Appointment a day before.
+                    <a>Privacy and Use Policy.</a>
+                </p>
+                <hr/>
+
+                <div class="form-group col-md-4">
+                    <label>Pincode</label>
+                    <input type="number" name="pincode" class="form-control" required>
+                    <p ng-show="userForm.pincode.$invalid && !userForm.pincode.$pristine" class="help-block">required.</p>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="text-upper engagement-profile-sub-head"> Appointment Date</label>
+                    <input type="date" name="date" />
+                </div>
+                <div class="form-group col-md-4">
+                        <label for="time">Appointment Time</label>
+                        <div>
+                            <select ng-model="vm.selectedVal" ng-options="x for x in vm.time_interval">
+                                <option value="" class="engagement_select_font">(Select Time)</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+            <div>
+            <div class="form-group col-md-6"> 
+                <label for="hosp">Near by Hospitals</label> 
+                <div ng-if="vm.selectedVal === '8 AM to 11 AM'">
+                    <div>
+                        <select ng-model="vm.hospVal" ng-options="hosp for hosp in vm.morning">
+                            <option value="" class="engagement_select_font">(Select Hospital)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div ng-if="vm.selectedVal === '1 PM to 4 PM'">
+                    <div>
+                        <select ng-model="vm.hospVal" ng-options="hosp for hosp in vm.afternoon">
+                            <option value="" class="engagement_select_font">(Select Hospital)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div ng-if="vm.selectedVal === '5 AM to 8 PM'">
+                    <div>
+                        <select ng-model="vm.hospVal" ng-options="hosp for hosp in vm.evening">
+                            <option value="" class="engagement_select_font">(Select Hospital)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-6" >
+                    <label for="doc">Doctor's available</label>  
+                <div ng-if="vm.hospVal === 'l.h hospital'">
+                    <div>
+                        <select ng-model="vm.docVal" ng-options="doc for doc in vm.hosp1">
+                            <option value="" class="engagement_select_font">(Select Doctor)</option>
+                        </select>
+                    </div>
+                </div>
+                <div ng-if="vm.hospVal === 'v.h hospital'">
+                    <div>
+                        <select ng-model="vm.docVal" ng-options="doc for doc in vm.hosp2">
+                            <option value="" class="engagement_select_font">(Select Doctor)</option>
+                        </select>
+                    </div>
+                </div>
+                <div ng-if="vm.hospVal === 'l.p hospital'">
+                    <div>
+                        <select ng-model="vm.docVal" ng-options="doc for doc in vm.hosp3">
+                            <option value="" class="engagement_select_font">(Select Doctor)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                    <div class="col-md-6">
+                        <button class="btn form-control text-center round-structure btn-linkedin " type="submit" ui-sref="memberlist" tabindex=3>Go Back?</button>
+                    </div>
+                    <div class=" col-md-6">
+                        <button class="btn form-control text-center round-structure btn-linkedin" type="submit" ui-sref="popupconfirmation" tabindex=3>Continue</button>
+                        
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+    </form>
+</div>
+</div>

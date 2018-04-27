@@ -8,15 +8,20 @@
                 </p>
                 <hr/>
                 <div>
-                <div class="form-group col-md-6" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                <div class="form-group col-md-4" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
                     <label>Name*</label>
                     <input type="text" name="name" class="form-control" ng-model="user.name" required>
                     <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
                 </div>
-                <div class="form-group col-md-6" >
+                <div class="form-group col-md-4" >
                         <label>D.O.B</label>
                         <input type="date" name="date" class="form-control" required>
                     </div>
+                    <div class="form-group col-md-4" >
+                            <label>Pincode</label>
+                            <input type="number" name="pincode" class="form-control" required>
+                            <p ng-show="userForm.pincode.$invalid && !userForm.pincode.$pristine" class="help-block">required.</p>
+                        </div>
                 </div>
                 <div class="">
                     <div class="form-group col-md-6" >
