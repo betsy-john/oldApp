@@ -67,4 +67,8 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'donateUs/confirm.html', 
         controller: 'appointment as vm'     
     })
+    .state('privacy', {
+        url: '/privacy',
+        templateUrl: 'donor-privacy.html'
+    })
 });

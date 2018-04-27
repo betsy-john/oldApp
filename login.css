@@ -52,6 +52,15 @@
 
 .login_head {
 	font-size: 17px;
+	font-family: Megi Sans;
+}
+
+.login_para{
+	width: 270px;
+	font-family: Megi Sans;
+	margin: 0px 2px;
+	font-size: 13px;
+	line-height: 20px;
 }
 
 .login_bg {
@@ -266,6 +275,35 @@ a.btn-linkedin:hover, a.btn-linkedin:focus {
 .zip-padding {
 	padding-left: 12px;
 }
+
+
+/*------------------------------Privacy Page-----------------------------*/
+
+#privacy-form {
+	margin: 200px 775px;
+}
+
+.privacy-content {
+	padding: 1em;	
+	background-color: #fff;
+	border-radius: 40px;
+	width: 300px;
+	height: 200px;
+}
+
+.privacyBtnAlign {
+	width: 270px;
+	align-items: center;
+}
+
+.privacyBtnAlign span {
+	display: inline-flex;
+	width: 100px;
+	padding: 0px 10px;
+	margin: 0 15px;
+
+}
+
 
 /*------------------------------Landing Page-----------------------------*/
 #landing_page {
