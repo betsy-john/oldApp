@@ -1,4 +1,4 @@
-angular.module('oldApp', ['ui.router', 'ngMaterial'])
+angular.module('oldApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'ngSanitize', 'ui.bootstrap'])
 angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -62,8 +62,7 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     })
     .state('popupconfirmation', {
         url: '/popupconfirmation',
-        templateUrl: 'donateUs/confirm.html', 
-        controller: 'appointment as vm'     
+        templateUrl: 'donateUs/appointment.html',   
     })
     .state('privacyanduse', {
         url: '/privacyanduse',
