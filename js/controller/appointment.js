@@ -2,19 +2,19 @@ angular.module('oldApp').controller('appointment', function ($uibModal, $log, $d
     var vm = this;
     vm.time_interval = ['8 AM to 11 AM', '1 PM to 4 PM', '5 AM to 8 PM'];
     vm.morning = ['l.h hospital', 'v.h hospital', 'l.p hospital']
-    vm.hosp1 = ['dr. Anita Dongra', 'dr. Ajay Chopra', 'dr. Lata Babu', 'dr. Payal Singh',]
-    vm.hosp2 = ['dr. Anita Dongra', 'dr. Ajay Chopra', 'dr. Lata Babu', 'dr. Payal Singh',]
-    vm.hosp3 = ['dr. Anita Dongra', 'dr. Ajay Chopra', 'dr. Lata Babu', 'dr. Payal Singh',]
+    vm.hosp1 = ['Dr. Anita Dongra', 'Dr. Ajay Chopra', 'Dr. Lata Babu', 'Dr. Payal Singh',]
+    vm.hosp2 = ['Dr. Anita Dongra', 'Dr. Ajay Chopra', 'Dr. Lata Babu', 'Dr. Payal Singh',]
+    vm.hosp3 = ['Dr. Anita Dongra', 'Dr. Ajay Chopra', 'Dr. Lata Babu', 'Dr. Payal Singh',]
 
     vm.afternoon = ['l.h hospital', 'v.h hospital', 'l.p hospital']
-    vm.hosp1 = ['dr.Sarthar Sharma', 'dr. Ankit Joseph', 'dr. Mibin John', 'dr. Ali Zafar',]
-    vm.hosp2 = ['dr.Sarthar Sharma', 'dr. Ankit Joseph', 'dr. Mibin John', 'dr. Ali Zafar',]
-    vm.hosp3 = ['dr.Sarthar Sharma', 'dr. Ankit Joseph', 'dr. Mibin John', 'dr. Ali Zafar',]
+    vm.hosp1 = ['Dr.Sarthar Sharma', 'Dr. Ankit Joseph', 'Dr. Mibin John', 'Dr. Ali Zafar',]
+    vm.hosp2 = ['Dr.Sarthar Sharma', 'Dr. Ankit Joseph', 'Dr. Mibin John', 'Dr. Ali Zafar',]
+    vm.hosp3 = ['Dr.Sarthar Sharma', 'Dr. Ankit Joseph', 'Dr. Mibin John', 'Dr. Ali Zafar',]
 
     vm.evening = ['l.h hospital', 'v.h hospital', 'l.p hospital']
-    vm.hosp1 = ['dr. Sam John', 'dr. Avit Mathur', 'dr. Beena Mattews', 'dr. Cliea rocheal',]
-    vm.hosp2 = ['dr. Sam John', 'dr. Avit Mathur', 'dr. Beena Mattews', 'dr. Cliea rocheal',]
-    vm.hosp3 = ['dr. Sam John', 'dr. Avit Mathur', 'dr. Beena Mattews', 'dr. Cliea rocheal',]
+    vm.hosp1 = ['Dr. Sam John', 'Dr. Avit Mathur', 'Dr. Beena Mattews', 'Dr. Cliea rocheal',]
+    vm.hosp2 = ['Dr. Sam John', 'Dr. Avit Mathur', 'Dr. Beena Mattews', 'Dr. Cliea rocheal',]
+    vm.hosp3 = ['Dr. Sam John', 'Dr. Avit Mathur', 'Dr. Beena Mattews', 'Dr. Cliea rocheal',]
 
     vm.animationsEnabled = true;
 
@@ -33,7 +33,7 @@ angular.module('oldApp').controller('appointment', function ($uibModal, $log, $d
             resolve: {
                 selVals: function () {
 
-                    return [vm.selectedVal,vm.hospVal,vm.docVal];
+                    return ['Time Between: '+vm.selectedVal,'Hospital: '+vm.hospVal,'Doctor Attending: '+vm.docVal];
                 },
             }
         });
@@ -54,6 +54,7 @@ angular.module('oldApp').controller('ModalInstanceCtrl', function ($uibModalInst
 
     vm.ok = function () {
         $uibModalInstance.close(vm.selected.selVals );
+        alert('ThankYou, You will soon get a Appointment message on Your registered Mobile');
     };
     vm.cancel = function () {
         $uibModalInstance.dismiss('cancel');

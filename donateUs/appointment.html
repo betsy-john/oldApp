@@ -110,7 +110,9 @@
                                 </div>
                             </script>
                             <button type="button" class="btn form-control text-center round-structure btn-linkedin" ng-click="vm.open('lg')">Confirm?</button>
-                            <div ng-show="vm.selected"> your Selection: {{ vm.selected }}</div>
+                            <div ng-show="vm.selected"> your Selection: {{ vm.selected }}
+                                <button type="button" class="btn form-control text-center round-structure btn-linkedin" ui-sref="donor">Thank You!</button>
+                            </div>
                             <div class="modal-parent">
                             </div>
                         </div>
