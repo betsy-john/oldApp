@@ -28,7 +28,7 @@
             </div>
             <div>
                 <div class="form-group col-md-6">
-                    <label for="hosp">Near by Hospitals</label>
+                    <label for="hosp" >Near by Hospitals</label>
                     <div ng-if="vm.selectedVal === '8 AM to 11 AM'">
                         <div>
                             <select ng-model="vm.hospVal" ng-options="hosp for hosp in vm.morning">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="doc">Doctor's available</label>
+                    <label for="doc">Doctor's available  </label>
                     <div ng-if="vm.hospVal === 'l.h hospital'">
                         <div>
                             <select ng-model="vm.docVal" ng-options="doc for doc in vm.hosp1">
@@ -78,26 +78,27 @@
                     </div>
                 </div>
                 <div>
+                      
                     <div class="col-md-6">
                         <button class="btn form-control text-center round-structure btn-linkedin " type="submit" ui-sref="memberlist" tabindex=3>Go Back?</button>
                     </div>
                     <div class=" col-md-6">
-                        <div ng-controller="ModalDemoCtrl as $ctrl" class="modal-demo">
+                        <div class="modal-demo">
                             <script type="text/ng-template" id="myModalContent.html">
                                 <div class="modal-header">
                                     <h3 class="modal-title" id="modal-title">Are You Sure with Your Choice ?</h3>
                                 </div>
                                 <div class="modal-body" id="modal-body">
-                                    <ul>
-                                        <li ng-repeat="item in $ctrl.items">
-                                            <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+                                    <ul ng-repeat="selVals in vm.selVals">
+                                        <li>
+                                            <b>{{selVals}}</b>
                                         </li>
                                     </ul>
-                                    Selected: <b>{{ $ctrl.selected.item }}</b>
+                           
                                 </div>
                                 <div class="modal-footer">
-                                    <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
-                                    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+                                    <button class="btn btn-primary" type="button" ng-click="vm.ok()">OK</button>
+                                    <button class="btn btn-warning" type="button" ng-click="vm.cancel()">Cancel</button>
                                 </div>
                             </script>
                             <script type="text/ng-template" id="stackedModal.html">
@@ -108,8 +109,8 @@
                                     Having multiple modals open at once is probably bad UX but it's technically possible.
                                 </div>
                             </script>
-                            <button type="button" class="btn form-control text-center round-structure btn-linkedin" ng-click="$ctrl.open('sm')">Confirm?</button>
-                            <div ng-show="$ctrl.selected">Selection from a modal: {{ $ctrl.selected }}</div>
+                            <button type="button" class="btn form-control text-center round-structure btn-linkedin" ng-click="vm.open('lg')">Confirm?</button>
+                            <div ng-show="vm.selected"> your Selection: {{ vm.selected }}</div>
                             <div class="modal-parent">
                             </div>
                         </div>
