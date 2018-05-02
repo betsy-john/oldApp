@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/betsy-john/oldApp/issues"
   },
-  "homepage": "https://github.com/betsy-john/oldApp#readme"
+  "homepage": "https://github.com/betsy-john/oldApp#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
