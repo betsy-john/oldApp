@@ -1,17 +1,17 @@
-var sayHello = function() {
+// var sayHello = function() {
 
-    console.log('Hello!');
+//     console.log('Hello!');
 
-}
-
-
-var sayGoodbye = function() {
-
-    console.log('Goodbye!');
-
-}
+// }
 
 
-exports.sayHello = sayHello;
+// var sayGoodbye = function() {
 
-exports.sayGoodbye = sayGoodbye;
+//     console.log('Goodbye!');
+
+// }
+
+
+// exports.sayHello = sayHello;
+
+// exports.sayGoodbye = sayGoodbye;

@@ -1,21 +1,15 @@
-var http = require('http');
+const express = require('express')
+const app = express()
+const port = 8080
 
-var url = require('url');
+app.get('/', (request, response) => {
+  response.send('Hello from Express!')
+})
 
+app.listen(port, (err) => {
+  if (err) {
+    return console.log('something bad happened', err)
+  }
 
-var server = http.createServer(function(req, res) {
-
-var page = url.parse(req.url).pathname;
-
-var test = require('./main'); // Calls for test.js (same folder)
-
-res.writeHead(200, {"Content-Type": "text/plain"});
-
-test.sayGoodbye();
-test.sayHello();
-
-res.end();
-
-});
-
-server.listen(8080);
+  console.log(`server is listening on ${port}`)
+})
