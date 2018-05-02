@@ -4,72 +4,72 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     $stateProvider
     .state('main', {
         url: '/',
-        templateUrl: 'public/donor-login.html'
+        templateUrl: 'donor-login.html'
     })
     .state('donor', {
         url: '/donor',
-        templateUrl: 'public/donor-login.html'
+        templateUrl: 'donor-login.html'
     })
     .state('donate', {
         url: '/donate',
-        templateUrl: 'public/donate.html',
+        templateUrl: 'donate.html',
         controller:'LoginCtrl'
     })
     .state('aboutus', {
         url: '/aboutus',
-        templateUrl: 'public/header/about-us.html', 
+        templateUrl: 'header/about-us.html', 
     })
     .state('header', {
         url: '/header',
-        templateUrl: 'public/header.html',
+        templateUrl: 'header.html',
         controller:'HeaderNav'
     })
     .state('lostPassword', {
         url: '/lostPassword',
-        templateUrl: 'public/login/forgot_pass.html',
+        templateUrl: 'login/forgot_pass.html',
     })
     .state('signup', {
         url: '/signup',
-        templateUrl: 'public/login/sign_up.html',
+        templateUrl: 'login/sign_up.html',
         controller:'signUp'
 
     })
     .state('gallery', {
         url: '/gallery',
-        templateUrl: 'public/header/gallery.html',
+        templateUrl: 'header/gallery.html',
     })
     .state('videomenu', {
         url: '/videomenu',
-        templateUrl: 'public/header/video.html',
+        templateUrl: 'header/video.html',
     })
     .state('charity', {
         url: '/charity',
-        templateUrl: 'public/donation.html',
+        templateUrl: 'donation.html',
     })
     .state('fillupform', {
         url: '/fillupform',
-        templateUrl: 'public/donateUs/fillUpform.html',
+        templateUrl: 'donateUs/fillUpform.html',
     })
     .state('memberlist', {
         url: '/memberlist',
-        templateUrl: 'public/donateUs/WhoAllWants.html',
+        templateUrl: 'donateUs/WhoAllWants.html',
         controller:'whoAllWants'
     })
     .state('appointment', {
         url: '/appointment',
-        templateUrl: 'public/donateUs/appointment.html', 
+        templateUrl: 'donateUs/appointment.html', 
         controller: 'appointment as vm'     
     })
     .state('popupconfirmation', {
         url: '/popupconfirmation',
-        templateUrl: 'public/donateUs/appointment.html',   
+        templateUrl: 'donateUs/appointment.html',   
     })
     .state('privacyanduse', {
         url: '/privacyanduse',
-        templateUrl: 'public/terms-and-policy/termAndService.html', 
+        templateUrl: 'terms-and-policy/termAndService.html', 
     })     
     .state('privacy', {
         url: '/privacy',
-        templateUrl: 'public/donor-privacy.html'
+        templateUrl: 'donor-privacy.html'
     })
 });
