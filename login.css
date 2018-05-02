@@ -13,6 +13,43 @@
 	width: 900px;
 }
 
+.alert-close {
+	
+	position: relative;
+    float: right;
+    background: black;
+	color: white;
+	border-style: double;
+	border-radius: 110px;
+	border-color: white;
+	border-width: 5px;
+
+}
+
+#terms-form .t-wid{
+	padding: 1em;	
+	background-color: #fff;
+	width: 900px;
+	height: 540px;
+	margin: auto;
+} 
+
+.term-privacy {
+	overflow-y: auto;
+	height: 500px;
+}
+
+.t-content{
+	height: 495px;
+}
+
+.t-font-h1{
+	font-size: 22px;
+}
+
+.t-font-h2{
+	font-size: 16px;
+}
 
 .login-content.term-privacy {
 	border-radius: 5px;
