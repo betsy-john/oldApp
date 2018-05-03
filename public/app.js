@@ -31,7 +31,8 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     .state('signup', {
         url: '/signup',
         templateUrl: 'login/sign_up.html',
-        controller:'signUp'
+        controller:'signUp as vm',
+       
 
     })
     .state('gallery', {
