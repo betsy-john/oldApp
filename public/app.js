@@ -72,4 +72,8 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/privacy',
         templateUrl: 'donor-privacy.html'
     })
+    .state('fillupformforblood', {
+        url: '/fillupformforblood',
+        templateUrl: 'NeedBank/fillupFormBlood.html'
+    })
 });
