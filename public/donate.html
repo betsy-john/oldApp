@@ -1,73 +1,50 @@
 <!-- SECTION 2 six boxes -->
 <ng-include src="'/log-out-header.html'"> </ng-include>
-<section class="section2art">
-    <ul>
-        <li class="code2">
-            <article class="code1" id="codearticle">
-                <p style="color: rgb(238, 185, 11)">
-                   <b> <u>Interactive Elements</u></b>
-                </p>
-                <p class="code6">
-                  <b> {{blockmsg}}.</b>    
-                </p>
-            </article>
+
+<div class="container" style="height:35%; width: 40%;   border-radius: 30px;"  id="login-form">
+    <div class="row ">
+        <div class="col-md-12  mx-5" style="padding:35px; ">
+            <ul>
+                <li class="row">
+                    <article class="code1 col-md-5" id="codearticle">
+                        <p style="color: rgb(238, 185, 11)">
+                            <b>
+                                <u>Interactive Elements</u>
+                            </b>
+                        </p>
+                        <p class="code6">
+                            <b> {{blockmsg}}.</b>
+                        </p>
+                    </article>
 
 
-            <article class="code1" >
-                <p style="color: rgb(238, 185, 11)">
-                   <b> <u>Donate</u></b>
-                </p>
-                <p class="code6">
-                    <b> {{blockmsg}}.</b>   
-                </p>
-            </article>
-
-            <article class="code1" >
-                <p style="color: rgb(238, 185, 11)">
-                   <b> <u>Donate</u></b>
-                </p>
-                <p class="code6">
-                    <b> {{blockmsg}}.</b>   
-                </p>
-            </article>
-        </li>
-    </ul>
+                    <article class="code1 col-md-5">
+                        <p style="color: rgb(238, 185, 11)">
+                            <b>
+                                <u>Donate</u>
+                            </b>
+                        </p>
+                        <p class="code6">
+                            <b> {{blockmsg}}.</b>
+                        </p>
+                    </article>
 
 
-    <ul>
-        <li class="code2">
-            <article class="code1">
-                <p style="color: rgb(238, 185, 11)">
-                   <b> <u>Contribute</u></b>
-                </p>
-                <p class="code6">
-                    <b> {{blockmsg}}.</b>   
-                </p>
-            </article>
+                </li>
+            </ul>
+            <div class="pull-left round-arrow-btn-sec">
+                <button class="glyphicon glyphicon-arrow-left round-arrow-btn" ui-sref="donor"></button>
+                <label class="round-arrow-btn-label hidden-sm label_sec"> <b>Go Back</b> </label>
+            </div>
+            <div class="pull-right round-arrow-btn-sec">
+                <button class="glyphicon glyphicon-arrow-right round-arrow-btn" ui-sref="charity"></button>
+                <label class="round-arrow-btn-label hidden-sm label_sec"><b>Next: Contact Information</b> </label>
+            </div>
+            <!-- ends register form -->
+        </div>
+        <!-- ends col-6 -->
 
-            <article class="code1">
-                <p style="color: rgb(238, 185, 11)">
-                   <b> <u>Participate</u></b>
-                </p>
-                <p class="code6">
-                    <b> {{blockmsg}}.</b>   
-                </p>
-            </article>
 
-            <article class="code1">
-                <p style="color: rgb(238, 185, 11)">
-                   <b> <u>Interactive Elements</u></b>
-                </p>
-                <p class="code6">
-                    <b> {{blockmsg}}.</b>   
-                </p>
-            </article>
-        </li>
-    </ul>
-    <div class="pull-left round-arrow-btn-sec">
-        <button class="glyphicon glyphicon-arrow-left round-arrow-btn" ui-sref="donor"></button><label class="round-arrow-btn-label hidden-sm label_sec">Go Back</label>
+
     </div>
-    <div class="pull-right round-arrow-btn-sec">
-        <button class="glyphicon glyphicon-arrow-right round-arrow-btn" ui-sref="charity"></button><label class="round-arrow-btn-label hidden-sm label_sec">Next: Contact Information</label>
-    </div>
-</section>
+</div>

@@ -84,4 +84,9 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/fillupformforblood',
         templateUrl: 'NeedBank/fillupFormBlood.html'
     })
+    .state('addMember', {
+        url: '/addMember',
+        templateUrl: 'NeedBank/addMember.html',
+        controller: 'addMember'   
+    })
 });
