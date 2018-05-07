@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+const path = require('path')
+const knex = require(path.resolve('./db_connection'));
 
 app.use(express.static('public'))
 

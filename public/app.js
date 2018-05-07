@@ -15,6 +15,10 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'donate.html',
         controller:'LoginCtrl'
     })
+    .state('edit', {
+        url: '/edit',
+        templateUrl: 'profile/edit-profile.html',
+    })
     .state('aboutus', {
         url: '/aboutus',
         templateUrl: 'header/about-us.html', 
@@ -32,8 +36,11 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/signup',
         templateUrl: 'login/sign_up.html',
         controller:'signUp as vm',
-       
-
+    })
+    .state('registered', {
+        url: '/registered',
+        templateUrl: 'login/userReg.html',  
+        controller: 'userReg as vm'     
     })
     .state('gallery', {
         url: '/gallery',
