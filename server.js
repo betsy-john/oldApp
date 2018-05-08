@@ -18,3 +18,10 @@ app.listen(port, (err) => {
 
   console.log(`server is listening on ${port}`)
 })
+
+
+app.get('/user/:name', function(req, res) {
+  res.send("name is set to " + req.params.name);
+ var name=req.params.name;
+ knex.dataUser(name);
+});
