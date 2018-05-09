@@ -1,8 +1,7 @@
-angular.module('oldApp').controller('userReg', function ( $scope,userInfo) {
-    'use strict';
-
-   $scope.name=userInfo.user
-    console.log('name', userInfo)
-});
+// angular.module('oldApp').controller('userReg', function ( $scope,userInfo) {
+//     'use strict';
+// console.log('userName of the person',userInfo.getUserDetails());
+  
+// });
 
 
