@@ -10,12 +10,7 @@ angular.module('oldApp').controller('signUp', function ($log, $location, userInf
         userInfo.addUser(vm.newUser);        
     }
     // This function get the name of the new user to user Reg page. 
-    vm.newUserName=function( usersName){
-        console.log('newUser details ',usersName);
-        vm.registered.usersName =usersName;
-        userInfo.getUserDetails(vm.registered.usersName);  
-        return  vm.usersName;
-    }   
+   
 });
 
 

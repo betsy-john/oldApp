@@ -37,6 +37,17 @@
                 }, deferred.reject);
                 return deferred.promise;
             };
+            apiService.validatingUsers = function(info) {
+                var deferred = $q.defer();
+                var request = {
+                    method: 'GET',
+                    url: "/userinfo/v1/"+info.userName
+                };
+                $http(request).then(function (result) {
+                    deferred.resolve(result.data);
+                }, deferred.reject);
+                return deferred.promise;
+            };
         
             return apiService;
         });

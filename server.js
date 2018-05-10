@@ -42,3 +42,9 @@ app.get('/users/v1/:name', function(req, res) {
  var name=req.params.name;
  knex.userDetails(name);
 });
+
+app.get('/userinfo/v1/:name', function(req, res) {
+  res.send("name is set to " + req.params.name);
+ var name=req.params.name;
+ knex.checkUser(name);
+});

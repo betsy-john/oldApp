@@ -56,7 +56,22 @@ function userDetails(name) {
     })
 }
 
+function checkUser(name) {
+  console.log("name===", name)
+  var some = knex('user').where({
+    userName: name
+  })
+    .then(function (data) {
+      console.log('data==', data)
+      return data;
+    })
+    .catch((err) => {
+      console.log('err==', err)
+
+    })
+}
+
 exports.userDetails = userDetails;
 exports.UserId = UserId;
 exports.UserInfo = UserInfo;
-
+exports.checkUser = checkUser;
