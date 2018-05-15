@@ -77,8 +77,9 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'terms-and-policy/termAndService.html', 
     })     
     .state('privacy', {
-        url: '/privacy',
-        templateUrl: 'donor-privacy.html'
+        url: '/privacy/:userName',
+        templateUrl: 'donor-privacy.html',
+        controller:'privacyCtrl'
     })
     .state('fillupformforblood', {
         url: '/fillupformforblood',
@@ -88,5 +89,10 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/addMember',
         templateUrl: 'NeedBank/addMember.html',
         controller: 'addMember'   
+    })
+    .state('adminProfile', {
+        url: '/adminProfile',
+        templateUrl: 'admin.html',
+        controller: 'adminCtrl'     
     })
 });

@@ -41,37 +41,28 @@ function UserInfo(userinfo) {
 }
 
 //this function take the registered user from  the database donates.user.
-function userDetails(name) {
-  console.log("name===", name)
-  var some = knex('user').where({
-    firstName: name
-  })
-    .then(function (data) {
-      console.log('data==', data)
-      return data;
-    })
-    .catch((err) => {
-      console.log('err==', err)
-
-    })
+function userDetails() {  
+return knex('user').then(function (data){
+  console.log("dattata",data)
+  return data;
+})
 }
 
 function checkUser(name) {
   console.log("name===", name)
-  var some = knex('user').where({
+return knex('user').where({
     userName: name
-  })
-    .then(function (data) {
-      console.log('data==', data)
-      return data;
-    })
-    .catch((err) => {
-      console.log('err==', err)
+  })   
+}
 
-    })
+function deleteUser(id) {
+return knex('user').where({
+    ID: id
+  }).del()   
 }
 
 exports.userDetails = userDetails;
 exports.UserId = UserId;
 exports.UserInfo = UserInfo;
 exports.checkUser = checkUser;
+exports.deleteUser = deleteUser;

@@ -1,21 +1,26 @@
 angular.module('oldApp').controller('LoginCtrl', function ($scope, urlRequestService, $state) {
     'use strict';
-    var vm=this;
-    $scope.user={};
-    console.log('user object=',$scope.user)
-   
+    var vm = this;
+    $scope.user = {};
+    var userinfo = $scope.user;
+    console.log('userinf=', userinfo)
     // function to submit the form after all validation has occurred			
     $scope.submitForm = function (isValid) {
-
         // check to make sure the form is completely valid
         if (isValid) {
-            urlRequestService.validatingUsers($scope.user).then(function(data){
-                console.log('uwe are donates=',data)
+            urlRequestService.validatingUsers($scope.user).then(function (data) {
+                console.log('uwe are donates=', data[0].firstName)
+                if ((data[0].userName === $scope.user.userName) && (data[0].password === $scope.user.password)) {
+                    console.log('userinfoooo=', userinfo.userName)
+                    $state.go('privacy',{'userName': userinfo.userName})
+                } else {
+                    alert('please check your username or password');
+                }
             })
-            $state.go('privacy')
-        } 
+
+        }
         else {
-            alert('Something went wrong');
+            alert('please check the required fields are field properly');
         }
 
     };
@@ -24,6 +29,6 @@ angular.module('oldApp').controller('LoginCtrl', function ($scope, urlRequestSer
             $scope.message = result.body;//object.property
             $scope.blockmsg = result.title;
         })
-    
+
 });
 

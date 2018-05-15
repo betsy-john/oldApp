@@ -1,0 +1,13 @@
+<!-- SECTION 2 six boxes -->
+<ng-include src="'/log-out-header.html'"> </ng-include>
+<div class="container" style=" height:55%; width: 60%;   border-radius: 30px; background-color: rgb(255, 255, 255)"  id="login-form">
+        <div class="row ">
+                <!-- <ng-include src="'/admin-header.html'"> </ng-include> -->
+            <div  style="padding:35px; ">
+                   <div class="col-md-6 "  ng-repeat="users in userList">
+                   <b> <div  style="color:rgb(12, 149, 190);" class="col-md-6">{{users.Name}} (id:{{users.id}})</div></b>
+                   <div class="col-md-6"><button class="btn form-control text-center round-structure btn-linkedin" tabindex=9 ng-click="delete(users.id,users.Name)">delete</button></div>
+                </div>
+        </div>
+ 
+    </div>
