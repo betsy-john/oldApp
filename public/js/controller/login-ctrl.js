@@ -11,8 +11,8 @@ angular.module('oldApp').controller('LoginCtrl', function ($scope, urlRequestSer
             urlRequestService.validatingUsers($scope.user).then(function (data) {
                 console.log('uwe are donates=', data[0].firstName)
                 if ((data[0].userName === $scope.user.userName) && (data[0].password === $scope.user.password)) {
-                    console.log('userinfoooo=', userinfo.userName)
-                    $state.go('privacy',{'userName': userinfo.userName})
+                    console.log('userinfoooo=', data[0].user_roles)
+                    $state.go('privacy',{'roles': data[0].user_roles})
                 } else {
                     alert('please check your username or password');
                 }

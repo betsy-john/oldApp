@@ -13,8 +13,8 @@ console.log('KNEX connect to database included.');
 
 function UserId(id) {
   console.log("id===", id)
-  var some = knex('user').where({
-    ID: id
+  var some = knex('users').where({
+    id: id
   })
     .then(function (data) {
       console.log('data==', data)
@@ -28,7 +28,7 @@ function UserId(id) {
 //this function put the new registration into the database donates.user.
 function UserInfo(userinfo) {
   console.log("userinfo===", userinfo)
-  knex('donates.user')
+  knex('donates.users')
     .insert(userinfo)
     .then(function (data) {
       console.log('data==', data)
@@ -42,7 +42,7 @@ function UserInfo(userinfo) {
 
 //this function take the registered user from  the database donates.user.
 function userDetails() {  
-return knex('user').then(function (data){
+return knex('users').then(function (data){
   console.log("dattata",data)
   return data;
 })
@@ -50,14 +50,14 @@ return knex('user').then(function (data){
 
 function checkUser(name) {
   console.log("name===", name)
-return knex('user').where({
+return knex('users').where({
     userName: name
   })   
 }
 
 function deleteUser(id) {
-return knex('user').where({
-    ID: id
+return knex('users').where({
+   id: id
   }).del()   
 }
 

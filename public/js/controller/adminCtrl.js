@@ -9,7 +9,7 @@ angular.module('oldApp').controller('adminCtrl', function ($scope, $stateParams,
             console.log('this is interesting', result.firstName);
        if(result.user_roles === 'user')
            {
-            $scope.RegUserList.push({ 'Name':'Name: '+ result.firstName + ' ' + result.lastName,'id': result.ID})
+            $scope.RegUserList.push({ 'Name':'Name: '+ result.firstName + ' ' + result.lastName,'id': result.id})
         }
         })
         $scope.RegUserList = data;

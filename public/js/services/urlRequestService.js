@@ -15,6 +15,7 @@
             return deferred.promise;
         };
         apiService.dbDetails = function (info) {
+            console.log('dbdetails ghjikl====>', info)
             var deferred = $q.defer();
             var request = {
                 method: 'POST',

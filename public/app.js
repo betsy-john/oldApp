@@ -77,7 +77,7 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'terms-and-policy/termAndService.html', 
     })     
     .state('privacy', {
-        url: '/privacy/:userName',
+        url: '/privacy/:roles',
         templateUrl: 'donor-privacy.html',
         controller:'privacyCtrl'
     })
@@ -94,5 +94,10 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/adminProfile',
         templateUrl: 'admin.html',
         controller: 'adminCtrl'     
+    })
+    .state('adminUserDetails', {
+        url: '/adminUserDetails/:Name',
+        templateUrl: 'admin-user-details.html',
+        controller: 'adminUserDetail'     
     })
 });
