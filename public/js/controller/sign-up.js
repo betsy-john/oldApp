@@ -7,12 +7,12 @@ angular.module('oldApp').controller('signUp', function ($log, $location, userInf
 // This function registers the new user who signs up to the app 
     vm.addUser = function () {
         console.log('newUser',vm.newUser)
-vm.newUser.user_role= 'user';
+vm.newUser.user_roles= 'user';
 
-var date= Date.now();  
-console.log('dateeee',date)
-var created_at= $filter('date')(created_at, "yyyy-MM-dd");  
-console.log('created_at',created_at)
+// var date= Date.now();  
+// console.log('dateeee',date)
+// var created_at= $filter('date')(created_at, "yyyy-MM-dd");  
+// console.log('created_at',created_at)
 
 console.log('kuch user',vm.newUser)
         userInfo.addUser(vm.newUser);        

@@ -60,7 +60,13 @@ app.get('/userinfo/v1/:name', function (req, res) {
 
     });
 });
-
+app.get('/user/v1/get/:id',function(req, res){
+  var id = req.params.id;
+  knex.getUser(id).then(function(data){
+    console.log('dleted user dta from the server',data)
+    res.send(data)
+  })
+})
 app.delete('/users/v1/delete/:id/:name', function (req, res) {
   var id = req.params.id;
   var name = req.params.name;
@@ -77,4 +83,61 @@ app.delete('/users/v1/delete/:id/:name', function (req, res) {
 
     });
 });
+
+app.post('/users/v1/deletedusers',function(req, res, next){
+  var deletedUserinfo = req.body
+  res.send('POST request to the homepage');
+  console.log("deleted userinfo is fr", deletedUserinfo)
+  knex.deletedUser(deletedUserinfo);
+})
+
+app.get('/deletedusers/v1/get', function (req, res) {
+
+  knex.getDeletedUserDetails().then(function (data) {
+    console.log('data==', data)
+    res.send(data);
+  })
+    .catch((err) => {
+      console.log('err==', err)
+
+    });;
+});
+//get restore user
+app.get('/restore/user/get/:id', function (req, res) {
+  var id = req.params.id
+  knex.getRestoreuserDetail(id).then(function (data) {
+    console.log('restored', data)
+    res.send(data);
+  })
+    .catch((err) => {
+      console.log('err==', err)
+
+    });;
+});
+//restoring users to main table 
+app.post('/users/v1/restoreusers',function(req, res, next){
+  var restoreUserinfo = req.body
+  res.send('POST request to the homepage');
+  console.log("deleted userinfo is fr", restoreUserinfo)
+  knex.restoreUser(restoreUserinfo);
+})
+
+app.delete('/user/v1/restoreuser/:id/:name', function (req, res) {
+  var id = req.params.id;
+  var name = req.params.name;
+  console.log('id', id)
+  console.log('name', name)
+  knex.deleteUserDel(id).then(function (data) {
+    if (data === 1) {
+      console.log('data=====', data)
+      res.send({ 'status code': 200, 'Name': name ,'status message': 'sucessfully deleted'});
+    }
+  })
+    .catch((err) => {
+      console.log('err==', err)
+
+    });
+});
+
+
 

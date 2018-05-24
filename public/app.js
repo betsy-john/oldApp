@@ -100,4 +100,14 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         templateUrl: 'admin-user-details.html',
         controller: 'adminUserDetail'     
     })
+    .state('userlog', {
+        url: '/userlog',
+        templateUrl: 'admin/user-log.html',
+        controller: 'adminCtrl'     
+    })
+    .state('deletedUser', {
+        url: '/deletedUser',
+        templateUrl: 'admin/deleted-user.html',
+        controller: 'adminCtrl'     
+    })
 });

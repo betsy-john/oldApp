@@ -1,0 +1,20 @@
+<!-- SECTION 2 six boxes -->
+<ng-include src="'/log-out-header.html'"> </ng-include>
+<ng-include src="'/admin/admin-header.html'"> </ng-include>
+<div class="container" style=" height:55%; width: 60%;   border-radius: 30px; background-color: rgb(255, 255, 255)" id="login-form">
+    <div class="row ">
+        <!-- <ng-include src="'/admin-header.html'"> </ng-include> -->
+        <div style="padding:35px; ">
+            <div class="col-md-6 " ng-repeat="users in DeluserList">
+                <b>
+                    <div style="color:rgb(12, 149, 190);" class="col-md-12">
+                        <a ui-sref="adminUserDetails({Name:users.Name})">{{users.Name}} (id:{{users.id}})</a>
+                    </div>
+                </b>
+                <div class="col-md-12">
+                    <button class="btn form-control text-center round-structure btn-linkedin" tabindex=9 ng-click="restore(users.id,users.Name)">Restore</button>
+                </div>
+            </div>
+        </div>
+
+    </div>

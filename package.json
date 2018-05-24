@@ -1,6 +1,7 @@
 {
   "name": "oldapp",
   "version": "1.0.0",
+  "private": true,
   "description": "## Installing node:     sudo apt-get update     sudo apt-get install nodejs ## Installing npm:",
   "main": "main.js",
   "scripts": {
