@@ -40,9 +40,30 @@ function UserInfo(userinfo) {
     })
 }
 
+function DocInfo(DocInfo) {
+  console.log("DocInfo===", DocInfo)
+  knex('donates.doctors')
+    .insert(DocInfo)
+    .then(function (data) {
+      console.log('data==', data)
+      return data;
+    })
+    .catch((err) => {
+      console.log('err==', err)
+
+    })
+}
+
+
 //this function take the registered user from  the database donates.user.
 function userDetails() {
   return knex('users').then(function (data) {
+    console.log("dattata", data)
+    return data;
+  })
+}
+function docDetails() {
+  return knex('donates.doctors').then(function (data) {
     console.log("dattata", data)
     return data;
   })
@@ -125,3 +146,5 @@ exports.getDeletedUserDetails = getDeletedUserDetails;
 exports.restoreUser=restoreUser;
 exports.getRestoreuserDetail=getRestoreuserDetail;
 exports.deleteUserDel=deleteUserDel;
+exports.DocInfo=DocInfo;
+exports.docDetails=docDetails;

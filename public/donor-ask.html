@@ -1,0 +1,30 @@
+<ng-include src="'/header.html'"> </ng-include>
+<div class="container-fluid login_bg padding_0">
+    <div id="landing_page">
+       <div class="text-center landing_sec">
+             <div class=" hidden-sm hidden-md hidden-lg landing-mob-content">
+             <h1>Hello {{currentUser.first_name}} {{currentUser.last_name}}.</h1>
+             <hr/>
+             <p>What would you like to do today?</p>
+          </div>
+          <span class="landing_msg hidden-xs">Welcome. Are you a</span>
+          <a ui-sref="donor" class="landing_nav landing_links">USER</a>
+          <span class="landing_divider landing_msg">or</span>
+          <a ui-sref="adminstrator" class="landing_nav landing_links">ADMINISTRATION</a>
+          <span class="landing_divider landing_msg">or</span>
+          <a ui-sref="employee" class="landing_nav landing_links">EMPLOYEE</a>
+          <span class="landing_msg hidden-xs">?</span>
+       </div>
+    </div>
+ </div>
+ <script>
+    if ($(window).width() < 768) {
+       var mobContent = $(".landing-mob-content");
+       var landLinks = $(".landing_links,.landing_msg");
+       mobContent.hide();
+       mobContent.delay(500).fadeIn(500);
+       landLinks.hide();
+       mobContent.delay(400).fadeOut(100);
+       landLinks.delay(2000).fadeIn(500);
+    }
+ </script>

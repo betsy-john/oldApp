@@ -4,11 +4,23 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     $stateProvider
     .state('main', {
         url: '/',
-        templateUrl: 'donor-login.html'
+        templateUrl: 'donor-ask.html'
+    })
+    .state('ask', {
+        url: '/ask',
+        templateUrl: 'donor-ask.html'
     })
     .state('donor', {
         url: '/donor',
         templateUrl: 'donor-login.html'
+    })
+    .state('adminstrator', {
+        url: '/adminstrator',
+        templateUrl: 'login/administrat-sign-in.html'
+    })
+    .state('employee', {
+        url: '/employee',
+        templateUrl: 'login/employee-login.html'
     })
     .state('donate', {
         url: '/donate',
@@ -36,6 +48,21 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/signup',
         templateUrl: 'login/sign_up.html',
         controller:'signUp as vm',
+    })
+    .state('docsignup', {
+        url: '/docsignup',
+        templateUrl: 'login/doctor-sign-up.html',
+        controller:'docSignUp as vm',
+    })
+    .state('adminstrationsignup', {
+        url: '/adminstrationsignup',
+        templateUrl: 'login/aministration-sign-up.html',
+        controller:'admintratorSignUp as vm',
+    })
+    .state('option', {
+        url: '/option',
+        templateUrl: 'login/sign-up-opt.html',
+        // controller:'signUp as vm',
     })
     .state('registered', {
         url: '/registered/:userName',

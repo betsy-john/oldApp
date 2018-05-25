@@ -318,6 +318,8 @@ a.btn-linkedin:hover, a.btn-linkedin:focus {
 	background-color: #000;
 	opacity: 0.8;
 	width: 100%;
+	height: 113px;
+	padding-top: 31px;
 }
 
 #landing_page .landing_nav {

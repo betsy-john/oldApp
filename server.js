@@ -35,11 +35,29 @@ app.post('/user/v1', function (req, res, next) {
   console.log("userinfo is fr", userinfo)
   knex.UserInfo(userinfo);
 });
+app.post('/user/v1/docs', function (req, res, next) {
+  var DocInfo = req.body
+  res.send('POST request to the homepage');
+  console.log("DocInfo is fr", DocInfo)
+  knex.DocInfo(DocInfo);
+});
 
 //this function take the registered user from  the database donates.user.
 app.get('/users/v1', function (req, res) {
 
   knex.userDetails().then(function (data) {
+    console.log('data==', data)
+    res.send(data);
+  })
+    .catch((err) => {
+      console.log('err==', err)
+
+    });;
+});
+
+app.get('users/v1/docs', function (req, res) {
+
+  knex.docDetails().then(function (data) {
     console.log('data==', data)
     res.send(data);
   })
