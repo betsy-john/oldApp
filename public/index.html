@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head> 
-<body class="Rimage">   
+    <link href="bower_components/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
+</head>
+<body class="Rimage">
     <!-- <header>
         <ng-include src="'/header.html'"> </ng-include>
     </header> -->
@@ -33,12 +34,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="bower_components/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+
     <!-- controllers -->
     <!-- <script src="/bower_components/angular/angular.js"></script> -->
-    <script src="/bower_components/angular-aria/angular-aria.js"></script> 
-    <script src="/bower_components/angular-animate/angular-animate.js"></script> 
-    <script src="/bower_components/angular-messages/angular-messages.js"></script> 
-    <script src="/bower_components/angular-material/angular-material.js"></script> 
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
     <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="lodash.min.js"></script>
     <script src="js/controller/login-ctrl.js"></script>
@@ -52,10 +55,16 @@
     <script src="js/controller/adminCtrl.js"></script>
     <script src="js/controller/admin-user-details.js"></script>
     <script src="js/controller/doc-sign-up.js"></script>
+    <script src="js/controller/hospital-sign-up.js"></script>
+    <script src="js/controller/notification-pop-up.js"></script>
+    <script src="js/controller/admin-notification.js"></script>
+
     <!-- <script src="js/controller/popup.js"></script> -->
     <!-- services -->
     <script src="js/services/urlRequestService.js"></script>
     <script src="js/services/user-info.js"></script>
     <script src="js/services/DocUrlService.js"></script>
+    <script src="js/services/administrationUrlService.js"></script>
+    <script src="js/services/notification-service.js"></script>
 </body>
 </html>

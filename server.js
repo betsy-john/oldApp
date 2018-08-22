@@ -19,7 +19,7 @@ app.listen(port, (err) => {
 
   console.log(`server is listening on ${port}`)
 })
-app.use(bodyParser.json());//for parsing json apllication
+app.use(bodyParser.json());//for parsing json application
 
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.get('/user/:id', function (req, res) {
@@ -42,6 +42,13 @@ app.post('/user/v1/docs', function (req, res, next) {
   knex.DocInfo(DocInfo);
 });
 
+//this will post administration details.
+app.post('/user/v1/administration', function (req, res, next) {
+  var HospInfo = req.body
+  res.send('POST request to the homepage');
+  console.log("HospInfo is fr", HospInfo)
+  knex.HospInfo(HospInfo);
+});
 //this function take the registered user from  the database donates.user.
 app.get('/users/v1', function (req, res) {
 
@@ -78,10 +85,10 @@ app.get('/userinfo/v1/:name', function (req, res) {
 
     });
 });
-app.get('/user/v1/get/:id',function(req, res){
+app.get('/user/v1/get/:id', function (req, res) {
   var id = req.params.id;
-  knex.getUser(id).then(function(data){
-    console.log('dleted user dta from the server',data)
+  knex.getUser(id).then(function (data) {
+    console.log('dleted user dta from the server', data)
     res.send(data)
   })
 })
@@ -102,7 +109,7 @@ app.delete('/users/v1/delete/:id/:name', function (req, res) {
     });
 });
 
-app.post('/users/v1/deletedusers',function(req, res, next){
+app.post('/users/v1/deletedusers', function (req, res, next) {
   var deletedUserinfo = req.body
   res.send('POST request to the homepage');
   console.log("deleted userinfo is fr", deletedUserinfo)
@@ -132,8 +139,8 @@ app.get('/restore/user/get/:id', function (req, res) {
 
     });;
 });
-//restoring users to main table 
-app.post('/users/v1/restoreusers',function(req, res, next){
+//restoring users to main table
+app.post('/users/v1/restoreusers', function (req, res, next) {
   var restoreUserinfo = req.body
   res.send('POST request to the homepage');
   console.log("deleted userinfo is fr", restoreUserinfo)
@@ -148,7 +155,7 @@ app.delete('/user/v1/restoreuser/:id/:name', function (req, res) {
   knex.deleteUserDel(id).then(function (data) {
     if (data === 1) {
       console.log('data=====', data)
-      res.send({ 'status code': 200, 'Name': name ,'status message': 'sucessfully deleted'});
+      res.send({ 'status code': 200, 'Name': name, 'status message': 'sucessfully restored' });
     }
   })
     .catch((err) => {
@@ -156,6 +163,33 @@ app.delete('/user/v1/restoreuser/:id/:name', function (req, res) {
 
     });
 });
+
+app.get('/admin/notifications', function (req, res, next) {
+  knex.getMeNotify().then(function (data) {
+    res.send(data);
+  })
+    .catch((err) => {
+      console.log('err==', err)
+
+    });
+
+})
+app.post('/user/v1/notification/:id', function (req, res, next) {
+  var id = req.params.id;
+  var info = req.body;
+  console.log('iddd', id);
+  console.log('info', info);
+   knex.postActive(info)
+    res.send({'status code': 200,'status message': 'active  is sucessfully updated' });
+
+  // .then(function () {
+  //   res.send({'status code': 200, 'Name': name, 'status message': 'active  is sucessfully updated' });
+  // })
+  // .catch((err) => {
+  //   console.log('err==',err)
+  // })
+
+})
 
 
 

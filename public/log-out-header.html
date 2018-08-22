@@ -10,11 +10,17 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav pull-right" >
+          <li ng-controller=notifyPopUp>
+            <a ng-click="notificationPopup();" ><img ng-src="images/notification.svg"/></a>
+            <div class="notify">1</div>
+          </li>
           <li class="dropdown">
             <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Edit profile <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a ui-sref="edit">Profile</a></li>
               <li><a ui-sref="donor">Logout</a></li>
+              <li><a ui-sref="notifySettings">Notification</a></li>
+
             </ul>
           </li>
         </ul>

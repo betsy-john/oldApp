@@ -23,6 +23,7 @@
                 data: info
             };
             $http(request).then(function (result) {
+              console.log('resultttt', result)
                 deferred.resolve(result.data);
             }, deferred.reject);
             return deferred.promise;
@@ -52,7 +53,7 @@
             }, deferred.reject);
             return deferred.promise;
         };
-        
+
         apiService.getUser = function (id) {
             var deferred = $q.defer();
             var request = {
@@ -114,7 +115,7 @@
             var request = {
                 method: 'GET',
                 url: "/restore/user/get/"+id
-               
+
             };
             $http(request).then(function (result) {
                 console.log('restore user details ', result)

@@ -1,10 +1,10 @@
 console.log('Including KNEX connect to database.');
 var knex = require('knex')({
-  client: 'mysql',
+  client: 'pg',
   connection: {
     host: '127.0.0.1',
-    user: 'root',
-    password: 'mail_123',
+    user: 'postgres',
+    password: 'postgres',
     database: 'donates'
   }
 });
@@ -28,7 +28,7 @@ function UserId(id) {
 //this function put the new registration into the database donates.user.
 function UserInfo(userinfo) {
   console.log("userinfo===", userinfo)
-  knex('donates.users')
+  knex('users')
     .insert(userinfo)
     .then(function (data) {
       console.log('data==', data)
@@ -42,7 +42,7 @@ function UserInfo(userinfo) {
 
 function DocInfo(DocInfo) {
   console.log("DocInfo===", DocInfo)
-  knex('donates.doctors')
+  knex('doctors')
     .insert(DocInfo)
     .then(function (data) {
       console.log('data==', data)
@@ -63,7 +63,7 @@ function userDetails() {
   })
 }
 function docDetails() {
-  return knex('donates.doctors').then(function (data) {
+  return knex('doctors').then(function (data) {
     console.log("dattata", data)
     return data;
   })
@@ -89,7 +89,7 @@ function deleteUser(id) {
 
 function deletedUser(deletedUserinfo) {
   console.log("deletedUserinfo===", deletedUserinfo)
-  knex('donates.deleted_users')
+  knex('deleted_users')
     .insert(deletedUserinfo)
     .then(function (data) {
       console.log('data==', data)
@@ -101,24 +101,46 @@ function deletedUser(deletedUserinfo) {
     })
 }
 
-//gets deleted user from deleted user table 
+//gets deleted user from deleted user table
 function getDeletedUserDetails() {
-  return knex('donates.deleted_users').then(function (data) {
+  return knex('deleted_users').then(function (data) {
     console.log("dattata dleted user details ", data)
     return data;
   })
 }
-//gets data from the restore table 
+//gets data from the restore table
 function getRestoreuserDetail(id) {
-  return knex('donates.deleted_users').where({
+  return knex('deleted_users').where({
     id: id
   })
 }
 //restoring data to main users table
 function restoreUser(restoreUserinfo) {
   console.log("restoreUserinfo===", restoreUserinfo)
-  knex('donates.users')
+  knex('users')
     .insert(restoreUserinfo)
+    .then(function (data) {
+      console.log('data==', data)
+      return data;
+    })
+    .catch((err) => {
+      console.log('err==', err)
+
+    });
+    console.log("restoreUserinfo22222===", restoreUserinfo[0].id)
+}
+
+//deleting from restore table
+function deleteUserDel(id) {
+  return knex('deleted_users').where({
+    id: id
+  }).del()
+}
+
+function HospInfo(HospInfo) {
+  console.log("HospInfo===", HospInfo)
+  knex('hospitals')
+    .insert(HospInfo)
     .then(function (data) {
       console.log('data==', data)
       return data;
@@ -128,11 +150,30 @@ function restoreUser(restoreUserinfo) {
 
     })
 }
-//deleting from restore table 
-function deleteUserDel(id) {
-  return knex('users').where({
-    id: id
-  }).del()
+
+function getMeNotify() {
+return knex('notifications')
+.then(function(data) {
+  return data;
+})
+.catch((err)=> {
+  console.log('err==>',err)
+})
+}
+
+function postActive(info) {
+  console.log('iddd', info.id)
+  console.log('activeVal', info.active)
+knex('notifications')
+.where({id:info.id})
+.update({
+  active:info.active
+
+})
+.catch((err) => {
+  console.log('err==', err)
+
+});
 }
 
 exports.userDetails = userDetails;
@@ -148,3 +189,6 @@ exports.getRestoreuserDetail=getRestoreuserDetail;
 exports.deleteUserDel=deleteUserDel;
 exports.DocInfo=DocInfo;
 exports.docDetails=docDetails;
+exports.HospInfo=HospInfo;
+exports.getMeNotify=getMeNotify;
+exports.postActive=postActive;

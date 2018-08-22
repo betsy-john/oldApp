@@ -1,0 +1,143 @@
+<ng-include src="'/header.html'"> </ng-include>
+<div class="container" style="background:white; height:85%; width: 33%;   border-radius: 30px;">
+    <div class="row ">
+        <div class="col-md-12  mx-5" style="padding:35px; ">
+            <form action="" method="post" id="fileForm" role="form">
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register.
+                        <span class="req">
+                            <small> required *</small>
+                        </span>
+                    </legend>
+
+
+                    <div class="form-group">
+                            <label for="name">
+                                <span class="req">* </span> Hospital/clinic name: </label>
+                            <input class="form-control" type="text" name="name" id="txt"   ng-model="vm.AdministratUser.hospital_name"required />
+                            <div id="errFirst"></div>
+                        </div>
+
+
+                    <div class="col-md-12">
+
+                        <div class="form-group col-md-6">
+                            <label for="lastname">
+                                <span class="req">* </span> Hospital Id </label>
+                            <input class="form-control" type="text" name="lastname" id="txt"  placeholder="hyphen or single quote OK"
+                            ng-model="vm.AdministratUser.hospital_id"  required />
+                            <div id="errLast"></div>
+                        </div>
+                        <div class="form-group  col-md-6">
+                                <label for="phonenumber">
+                                    <span class="req">* </span> Phone Number: </label>
+                                <input required type="text" name="phonenumber" id="phone" class="form-control phone" maxlength="28"  ng-model="vm.AdministratUser.phoneNumber" onkeyup="validatephone(this);"
+                                    placeholder="registered number" />
+                            </div>
+
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label for="email">
+                            <span class="req">* </span> Email Address: </label>
+                        <input class="form-control" required type="text" name="email" id="email"  placeholder="registered email" onchange="email_validate(this.value);"  ng-model="vm.AdministratUser.email" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="col-md-12">
+                    <div class="form-group  col-md-4">
+                        <label for="plot_no">
+                            <span class="req">* </span> Plot No.:
+
+                        </label>
+                        <input class="form-control" type="text" name="plot_no" id="txt" onkeyup="Validate(this)" placeholder="plot_no"
+                        ng-model="vm.AdministratUser.plot_number" required />
+                        <div id="errLast"></div>
+                    </div>
+                    <div class="form-group  col-md-4">
+                            <label for="Street">
+                                <span class="req">* </span> Street:
+
+                            </label>
+                            <input class="form-control" type="text" name="Street" id="txt" onkeyup="Validate(this)" placeholder="Street"
+                            ng-model="vm.AdministratUser.street" required />
+                            <div id="errLast"></div>
+                        </div>
+                        <div class="form-group  col-md-4">
+                                <label for="District">
+                                    <span class="req">* </span>  District:
+
+                                </label>
+                                <input class="form-control" type="text" name="District" id="txt" onkeyup="Validate(this)" placeholder="district"
+                                ng-model="vm.AdministratUser.district" required />
+                                <div id="errLast"></div>
+                            </div>
+                </div>
+                <div class="col-md-12">
+                        <div class="form-group  col-md-4">
+                            <label for="pin_code">
+                                <span class="req">* </span> Pin Code:
+
+                            </label>
+                            <input class="form-control" type="text" name="pin_code" id="txt" onkeyup="Validate(this)" placeholder="pin_code"
+                            ng-model="vm.AdministratUser.pincode" required />
+                            <div id="errLast"></div>
+                        </div>
+                        <div class="form-group  col-md-4">
+                                <label for="Landmark">
+                                    <span class="req">* </span> Landmark:
+
+                                </label>
+                                <input class="form-control" type="text" name="Landmark" id="txt" onkeyup="Validate(this)" placeholder="Landmark"
+                                ng-model="vm.AdministratUser.landmark" required />
+                                <div id="errLast"></div>
+                            </div>
+                            <div class="form-group  col-md-4">
+                                    <label for="State">
+                                        <span class="req">* </span>  State:
+
+                                    </label>
+                                    <input class="form-control" type="text" name="State" id="txt" onkeyup="Validate(this)" placeholder="State"
+                                    ng-model="vm.AdministratUser.state" required />
+                                    <div id="errLast"></div>
+                                </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            <span class="req">* </span> Password: </label>
+                        <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16" id="pass1"   ng-model="vm.AdministratUser.password"/> </p>
+
+                        <label for="password">
+                            <span class="req">* </span> Password Confirm: </label>
+                        <input required name="password" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"
+                            id="pass2" onkeyup="checkPass(); return false;" />
+                        <span id="confirmMessage" class="confirmMessage"></span>
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="hidden" value="" name="dateregistered">
+                        <input type="hidden" value="0" name="activate" />
+                        <hr>
+
+                        <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"
+                            id="field_terms">
+                        <label for="terms">I agree with the
+                            <a href="terms.php" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label>
+                        <span class="req">* </span>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" ng-click="vm.addUser();" ui-sref="registered({userName: vm.AdministratUser.hospital_name})">
+                    </div>
+                    <h5>You will receive an email to complete the registration and validation process. </h5>
+                    <h5>Be sure to check your spam folders. </h5>
+                </fieldset>
+            </form>
+            <!-- ends register form -->
+        </div>
+        <!-- ends col-6 -->
+
+
+
+    </div>
+</div>

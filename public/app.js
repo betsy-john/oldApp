@@ -31,9 +31,14 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
         url: '/edit',
         templateUrl: 'profile/edit-profile.html',
     })
+    .state('notifySettings', {
+      url: '/notifySettings',
+      templateUrl: 'admin/admin-notification.html',
+      controller: 'adminNotification'
+  })
     .state('aboutus', {
         url: '/aboutus',
-        templateUrl: 'header/about-us.html', 
+        templateUrl: 'header/about-us.html',
     })
     .state('header', {
         url: '/header',
@@ -56,8 +61,8 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     })
     .state('adminstrationsignup', {
         url: '/adminstrationsignup',
-        templateUrl: 'login/aministration-sign-up.html',
-        controller:'admintratorSignUp as vm',
+        templateUrl: 'login/administration-sign-up.html',
+        controller:'hospSignUp as vm',
     })
     .state('option', {
         url: '/option',
@@ -66,8 +71,8 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     })
     .state('registered', {
         url: '/registered/:userName',
-        templateUrl: 'login/userReg.html',  
-        controller: 'userReg'     
+        templateUrl: 'login/userReg.html',
+        controller: 'userReg'
     })
     .state('gallery', {
         url: '/gallery',
@@ -92,17 +97,17 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     })
     .state('appointment', {
         url: '/appointment',
-        templateUrl: 'donateUs/appointment.html', 
-        controller: 'appointment as vm'     
+        templateUrl: 'donateUs/appointment.html',
+        controller: 'appointment as vm'
     })
     .state('popupconfirmation', {
         url: '/popupconfirmation',
-        templateUrl: 'donateUs/appointment.html',   
+        templateUrl: 'donateUs/appointment.html',
     })
     .state('privacyanduse', {
         url: '/privacyanduse',
-        templateUrl: 'terms-and-policy/termAndService.html', 
-    })     
+        templateUrl: 'terms-and-policy/termAndService.html',
+    })
     .state('privacy', {
         url: '/privacy/:roles',
         templateUrl: 'donor-privacy.html',
@@ -115,26 +120,26 @@ angular.module('oldApp').config(function ($stateProvider,$urlRouterProvider) {
     .state('addMember', {
         url: '/addMember',
         templateUrl: 'NeedBank/addMember.html',
-        controller: 'addMember'   
+        controller: 'addMember'
     })
     .state('adminProfile', {
         url: '/adminProfile',
         templateUrl: 'admin.html',
-        controller: 'adminCtrl'     
+        controller: 'adminCtrl'
     })
     .state('adminUserDetails', {
         url: '/adminUserDetails/:Name',
         templateUrl: 'admin-user-details.html',
-        controller: 'adminUserDetail'     
+        controller: 'adminUserDetail'
     })
     .state('userlog', {
         url: '/userlog',
         templateUrl: 'admin/user-log.html',
-        controller: 'adminCtrl'     
+        controller: 'adminCtrl'
     })
     .state('deletedUser', {
         url: '/deletedUser',
         templateUrl: 'admin/deleted-user.html',
-        controller: 'adminCtrl'     
+        controller: 'adminCtrl'
     })
 });

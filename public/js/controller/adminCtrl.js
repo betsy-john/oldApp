@@ -1,4 +1,4 @@
-angular.module('oldApp').controller('adminCtrl', function ($scope, $stateParams, urlRequestService) {
+angular.module('oldApp').controller('adminCtrl', function ($scope, $stateParams, urlRequestService, $window) {
     'use strict';
 
     $scope.RegUserList = [];
@@ -30,14 +30,15 @@ angular.module('oldApp').controller('adminCtrl', function ($scope, $stateParams,
         })
         urlRequestService.deleteUser(id,name).then(function(data){
             console.log('deleted person', data);
-        });        
+            location.reload();
+        });
     }
     urlRequestService.getDeletedUserDetails().then(function(data){
         _.forEach(data, function (result) {
             console.log('this is interesting', result.firstName);
-      
+
             $scope.DeletedUserList.push({ 'Name':'Name: '+ result.firstName + ' ' + result.lastName,'id': result.id})
-        
+
         })
         $scope.DeletedUserList = data;
         console.log('-----------   $scope.DeletedUserList insiddee function1', $scope.DeletedUserList);
@@ -52,11 +53,12 @@ angular.module('oldApp').controller('adminCtrl', function ($scope, $stateParams,
             urlRequestService.restoreUser(data).then(function(data){
                 console.log('==============>>part2 restore', data);
             })
-        }) 
+        })
         urlRequestService.deleteUserDel(id,name).then(function(data){
             console.log('deleted person', data);
-        });     
-          
+            location.reload();
+        });
+
     }
 
 });

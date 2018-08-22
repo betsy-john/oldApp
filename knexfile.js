@@ -3,44 +3,50 @@
 module.exports = {
 
   development: {
-    client: 'mysql',
+    client: 'postgresql',
     connection: {
-      filename: './dev.mysql',
       database: 'donates',
-      user: 'root',
-      password: 'mail_123'
+      user:     'postgres',
+      password: 'postgres'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
     }
   },
 
   staging: {
-    client: 'mysql',
+    client: 'postgresql',
     connection: {
       database: 'donates',
-      user:     'root',
-      password: 'mail_123'
+      user:     'postgres',
+      password: 'postgres'
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'donates_staging_migrations'
+      tableName: 'knex_migrations'
     }
   },
 
   production: {
-    client: 'mysql',
+    client: 'postgresql',
     connection: {
       database: 'donates',
-      user:     'root',
-      password: 'mail_123'
+      user:     'postgres',
+      password: 'postgres'
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'donates_production_migrations'
+      tableName: 'knex_migrations'
     }
   }
 
