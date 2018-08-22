@@ -233,7 +233,7 @@ a.btn-facebook:hover, a.btn-facebook:focus {
 }
 
 #login-form .btn-google {
-	background-color: #dd4b34;
+	background-color: #ffe553;
 	padding-right: 26px;
 }
 
@@ -262,13 +262,13 @@ a.btn-google:hover, a.btn-google:focus {
 }
 
 .form-control.btn-linkedin {
-	background-color: #007cbc;
+	background-color: #c01b52;
 	outline-style: none;
 	color: #fff;
 }
 
 a.btn-linkedin:hover, a.btn-linkedin:focus {
-	background-color: #007cbc;
+	background-color: #d11534;
 	outline-style: none;
 }
 

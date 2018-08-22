@@ -169,6 +169,9 @@ knex('notifications')
 .update({
   active:info.active
 
+}).then(function(data){
+console.log('the okop',data)
+return data;
 })
 .catch((err) => {
   console.log('err==', err)
