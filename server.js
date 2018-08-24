@@ -2,6 +2,7 @@ const cool = require('cool-ascii-faces')
 const express = require('express')
 const app = express()
 var bodyParser = require('body-parser');
+var Q =require('q')
 const path = require('path')
 const knex = require(path.resolve('./db_connection'));
 
@@ -23,6 +24,14 @@ app.listen(port, (err) => {
 app.use(bodyParser.json());//for parsing json application
 
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.get('/times', (req, res) => {
+  let result = ''
+  const times = process.env.TIMES || 5
+  for (i = 0; i < times; i++) {
+    result += i + ' '
+  }
+  res.send(result)
+})
 app.get('/user/:id', function (req, res) {
   res.send("id is set to " + req.params.id);
   var id = req.params.id;
@@ -180,8 +189,13 @@ app.post('/user/v1/notification/:id', function (req, res, next) {
   var info = req.body;
   console.log('iddd', id);
   console.log('info', info);
-   knex.postActive(info)
-    res.send({'status code': 200,'status message': 'active  is sucessfully updated' });
+   knex.activeVal(info).then(function (data) {
+console.log('data ',data)
+if(data === 1){
+res.send({'status code': 200,'status message': 'active  is sucessfully updated' });
+}
+   });
+    // res.send({'status code': 200,'status message': 'active  is sucessfully updated' });
 
   // .then(function () {
   //   res.send({'status code': 200, 'Name': name, 'status message': 'active  is sucessfully updated' });

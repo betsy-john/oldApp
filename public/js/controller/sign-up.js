@@ -4,10 +4,10 @@ angular.module('oldApp').controller('signUp', function ($log, $location, userInf
     var vm = this;
     vm.newUser = {};
     vm.registered={};
+    $scope.names = ["Admin", "Student"];
 // This function registers the new user who signs up to the app
     vm.addUser = function () {
         console.log('newUser',vm.newUser)
-vm.newUser.user_roles= 'user';
 
 // var date= Date.now();
 // console.log('dateeee',date)

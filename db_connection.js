@@ -161,21 +161,18 @@ return knex('notifications')
 })
 }
 
-function postActive(info) {
-  console.log('iddd', info.id)
-  console.log('activeVal', info.active)
-knex('notifications')
-.where({id:info.id})
-.update({
+function activeVal(info) {
+  knex('notifications')
+  .where({id:info.id})
+  .update({
   active:info.active
-
-}).then(function(data){
+})
+.then(function(data){
 console.log('the okop',data)
 return data;
 })
-.catch((err) => {
-  console.log('err==', err)
-
+.catch((err)=> {
+  console.log('err==>',err)
 });
 }
 
@@ -194,4 +191,4 @@ exports.DocInfo=DocInfo;
 exports.docDetails=docDetails;
 exports.HospInfo=HospInfo;
 exports.getMeNotify=getMeNotify;
-exports.postActive=postActive;
+exports.activeVal=activeVal;
